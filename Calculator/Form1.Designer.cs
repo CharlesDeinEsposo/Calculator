@@ -217,13 +217,15 @@ namespace Calculator
             // 
             // number_5
             // 
+            this.number_5.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.number_5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.number_5.Font = new System.Drawing.Font("Futura BdCn BT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.number_5.Location = new System.Drawing.Point(122, 300);
             this.number_5.Name = "number_5";
             this.number_5.Size = new System.Drawing.Size(103, 58);
             this.number_5.TabIndex = 13;
             this.number_5.Text = "5";
-            this.number_5.UseVisualStyleBackColor = true;
+            this.number_5.UseVisualStyleBackColor = false;
             this.number_5.Click += new System.EventHandler(this.button_Click);
             // 
             // number_6
