@@ -40,5 +40,15 @@ namespace Calculator
         {
             txt_output.Text = "0";
         }
+
+        private void delete_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dec_point_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

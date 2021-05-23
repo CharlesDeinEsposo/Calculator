@@ -58,8 +58,9 @@ namespace Calculator
             // 
             // equals
             // 
-            this.equals.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.equals.FlatAppearance.BorderColor = System.Drawing.Color.Lavender;
+            this.equals.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.equals.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.equals.FlatAppearance.BorderSize = 4;
             this.equals.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.equals.Font = new System.Drawing.Font("Futura BdCn BT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.equals.Location = new System.Drawing.Point(340, 428);
@@ -71,8 +72,9 @@ namespace Calculator
             // 
             // dec_point
             // 
-            this.dec_point.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.dec_point.FlatAppearance.BorderColor = System.Drawing.Color.Lavender;
+            this.dec_point.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.dec_point.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.dec_point.FlatAppearance.BorderSize = 4;
             this.dec_point.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.dec_point.Font = new System.Drawing.Font("Futura BdCn BT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.dec_point.Location = new System.Drawing.Point(231, 428);
@@ -81,22 +83,28 @@ namespace Calculator
             this.dec_point.TabIndex = 1;
             this.dec_point.Text = ".";
             this.dec_point.UseVisualStyleBackColor = false;
+            this.dec_point.Click += new System.EventHandler(this.dec_point_Click);
             // 
             // number_0
             // 
+            this.number_0.BackColor = System.Drawing.Color.Orange;
+            this.number_0.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.number_0.FlatAppearance.BorderSize = 4;
+            this.number_0.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.number_0.Font = new System.Drawing.Font("Futura BdCn BT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.number_0.Location = new System.Drawing.Point(122, 428);
             this.number_0.Name = "number_0";
             this.number_0.Size = new System.Drawing.Size(103, 58);
             this.number_0.TabIndex = 2;
             this.number_0.Text = "0";
-            this.number_0.UseVisualStyleBackColor = true;
+            this.number_0.UseVisualStyleBackColor = false;
             this.number_0.Click += new System.EventHandler(this.button_Click);
             // 
             // plus_minus
             // 
-            this.plus_minus.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.plus_minus.FlatAppearance.BorderColor = System.Drawing.Color.Lavender;
+            this.plus_minus.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.plus_minus.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.plus_minus.FlatAppearance.BorderSize = 4;
             this.plus_minus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.plus_minus.Font = new System.Drawing.Font("Futura BdCn BT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.plus_minus.Location = new System.Drawing.Point(13, 428);
@@ -108,8 +116,9 @@ namespace Calculator
             // 
             // add
             // 
-            this.add.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.add.FlatAppearance.BorderColor = System.Drawing.Color.Lavender;
+            this.add.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.add.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.add.FlatAppearance.BorderSize = 4;
             this.add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.add.Font = new System.Drawing.Font("Futura BdCn BT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.add.Location = new System.Drawing.Point(340, 364);
@@ -121,8 +130,9 @@ namespace Calculator
             // 
             // subtract
             // 
-            this.subtract.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.subtract.FlatAppearance.BorderColor = System.Drawing.Color.Lavender;
+            this.subtract.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.subtract.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.subtract.FlatAppearance.BorderSize = 4;
             this.subtract.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.subtract.Font = new System.Drawing.Font("Futura BdCn BT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.subtract.Location = new System.Drawing.Point(340, 300);
@@ -134,8 +144,9 @@ namespace Calculator
             // 
             // multiply
             // 
-            this.multiply.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.multiply.FlatAppearance.BorderColor = System.Drawing.Color.Lavender;
+            this.multiply.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.multiply.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.multiply.FlatAppearance.BorderSize = 4;
             this.multiply.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.multiply.Font = new System.Drawing.Font("Futura BdCn BT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.multiply.Location = new System.Drawing.Point(340, 236);
@@ -147,8 +158,9 @@ namespace Calculator
             // 
             // divide
             // 
-            this.divide.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.divide.FlatAppearance.BorderColor = System.Drawing.Color.Lavender;
+            this.divide.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.divide.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.divide.FlatAppearance.BorderSize = 4;
             this.divide.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.divide.Font = new System.Drawing.Font("Futura BdCn BT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.divide.Location = new System.Drawing.Point(340, 172);
@@ -160,8 +172,9 @@ namespace Calculator
             // 
             // delete
             // 
-            this.delete.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.delete.FlatAppearance.BorderColor = System.Drawing.Color.Lavender;
+            this.delete.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.delete.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.delete.FlatAppearance.BorderSize = 4;
             this.delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.delete.Font = new System.Drawing.Font("Futura BdCn BT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.delete.Location = new System.Drawing.Point(340, 108);
@@ -170,55 +183,73 @@ namespace Calculator
             this.delete.TabIndex = 8;
             this.delete.Text = "⌫";
             this.delete.UseVisualStyleBackColor = false;
+            this.delete.Click += new System.EventHandler(this.delete_Click);
             // 
             // number_1
             // 
+            this.number_1.BackColor = System.Drawing.Color.Orange;
+            this.number_1.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.number_1.FlatAppearance.BorderSize = 4;
+            this.number_1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.number_1.Font = new System.Drawing.Font("Futura BdCn BT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.number_1.Location = new System.Drawing.Point(13, 364);
             this.number_1.Name = "number_1";
             this.number_1.Size = new System.Drawing.Size(103, 58);
             this.number_1.TabIndex = 11;
             this.number_1.Text = "1";
-            this.number_1.UseVisualStyleBackColor = true;
+            this.number_1.UseVisualStyleBackColor = false;
             this.number_1.Click += new System.EventHandler(this.button_Click);
             // 
             // number_2
             // 
+            this.number_2.BackColor = System.Drawing.Color.Orange;
+            this.number_2.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.number_2.FlatAppearance.BorderSize = 4;
+            this.number_2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.number_2.Font = new System.Drawing.Font("Futura BdCn BT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.number_2.Location = new System.Drawing.Point(122, 364);
             this.number_2.Name = "number_2";
             this.number_2.Size = new System.Drawing.Size(103, 58);
             this.number_2.TabIndex = 10;
             this.number_2.Text = "2";
-            this.number_2.UseVisualStyleBackColor = true;
+            this.number_2.UseVisualStyleBackColor = false;
             this.number_2.Click += new System.EventHandler(this.button_Click);
             // 
             // number_3
             // 
+            this.number_3.BackColor = System.Drawing.Color.Orange;
+            this.number_3.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.number_3.FlatAppearance.BorderSize = 4;
+            this.number_3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.number_3.Font = new System.Drawing.Font("Futura BdCn BT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.number_3.Location = new System.Drawing.Point(231, 364);
             this.number_3.Name = "number_3";
             this.number_3.Size = new System.Drawing.Size(103, 58);
             this.number_3.TabIndex = 9;
             this.number_3.Text = "3";
-            this.number_3.UseVisualStyleBackColor = true;
+            this.number_3.UseVisualStyleBackColor = false;
             this.number_3.Click += new System.EventHandler(this.button_Click);
             // 
             // number_4
             // 
+            this.number_4.BackColor = System.Drawing.Color.Orange;
+            this.number_4.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.number_4.FlatAppearance.BorderSize = 4;
+            this.number_4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.number_4.Font = new System.Drawing.Font("Futura BdCn BT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.number_4.Location = new System.Drawing.Point(13, 300);
             this.number_4.Name = "number_4";
             this.number_4.Size = new System.Drawing.Size(103, 58);
             this.number_4.TabIndex = 14;
             this.number_4.Text = "4";
-            this.number_4.UseVisualStyleBackColor = true;
+            this.number_4.UseVisualStyleBackColor = false;
             this.number_4.Click += new System.EventHandler(this.button_Click);
             // 
             // number_5
             // 
-            this.number_5.BackColor = System.Drawing.SystemColors.Control;
+            this.number_5.BackColor = System.Drawing.Color.Orange;
             this.number_5.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.number_5.FlatAppearance.BorderSize = 4;
             this.number_5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.number_5.Font = new System.Drawing.Font("Futura BdCn BT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.number_5.Location = new System.Drawing.Point(122, 300);
@@ -231,52 +262,69 @@ namespace Calculator
             // 
             // number_6
             // 
+            this.number_6.BackColor = System.Drawing.Color.Orange;
+            this.number_6.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.number_6.FlatAppearance.BorderSize = 4;
+            this.number_6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.number_6.Font = new System.Drawing.Font("Futura BdCn BT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.number_6.Location = new System.Drawing.Point(231, 300);
             this.number_6.Name = "number_6";
             this.number_6.Size = new System.Drawing.Size(103, 58);
             this.number_6.TabIndex = 12;
             this.number_6.Text = "6";
-            this.number_6.UseVisualStyleBackColor = true;
+            this.number_6.UseVisualStyleBackColor = false;
             this.number_6.Click += new System.EventHandler(this.button_Click);
             // 
             // number_7
             // 
+            this.number_7.BackColor = System.Drawing.Color.Orange;
+            this.number_7.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.number_7.FlatAppearance.BorderSize = 4;
+            this.number_7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.number_7.Font = new System.Drawing.Font("Futura BdCn BT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.number_7.Location = new System.Drawing.Point(13, 236);
             this.number_7.Name = "number_7";
             this.number_7.Size = new System.Drawing.Size(103, 58);
             this.number_7.TabIndex = 17;
             this.number_7.Text = "7";
-            this.number_7.UseVisualStyleBackColor = true;
+            this.number_7.UseVisualStyleBackColor = false;
             this.number_7.Click += new System.EventHandler(this.button_Click);
             // 
             // number_8
             // 
+            this.number_8.BackColor = System.Drawing.Color.Orange;
+            this.number_8.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.number_8.FlatAppearance.BorderSize = 4;
+            this.number_8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.number_8.Font = new System.Drawing.Font("Futura BdCn BT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.number_8.Location = new System.Drawing.Point(122, 236);
             this.number_8.Name = "number_8";
             this.number_8.Size = new System.Drawing.Size(103, 58);
             this.number_8.TabIndex = 16;
             this.number_8.Text = "8";
-            this.number_8.UseVisualStyleBackColor = true;
+            this.number_8.UseVisualStyleBackColor = false;
             this.number_8.Click += new System.EventHandler(this.button_Click);
             // 
             // number_9
             // 
+            this.number_9.BackColor = System.Drawing.Color.Orange;
+            this.number_9.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.number_9.FlatAppearance.BorderSize = 4;
+            this.number_9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.number_9.Font = new System.Drawing.Font("Futura BdCn BT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.number_9.Location = new System.Drawing.Point(231, 236);
             this.number_9.Name = "number_9";
             this.number_9.Size = new System.Drawing.Size(103, 58);
             this.number_9.TabIndex = 15;
             this.number_9.Text = "9";
-            this.number_9.UseVisualStyleBackColor = true;
+            this.number_9.UseVisualStyleBackColor = false;
             this.number_9.Click += new System.EventHandler(this.button_Click);
             // 
             // fraction
             // 
-            this.fraction.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.fraction.FlatAppearance.BorderColor = System.Drawing.Color.Lavender;
+            this.fraction.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.fraction.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.fraction.FlatAppearance.BorderSize = 4;
             this.fraction.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.fraction.Font = new System.Drawing.Font("Futura BdCn BT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.fraction.Location = new System.Drawing.Point(13, 172);
@@ -288,8 +336,9 @@ namespace Calculator
             // 
             // exponent
             // 
-            this.exponent.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.exponent.FlatAppearance.BorderColor = System.Drawing.Color.Lavender;
+            this.exponent.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.exponent.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.exponent.FlatAppearance.BorderSize = 4;
             this.exponent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.exponent.Font = new System.Drawing.Font("Futura BdCn BT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.exponent.Location = new System.Drawing.Point(122, 172);
@@ -301,8 +350,9 @@ namespace Calculator
             // 
             // sqr_rt
             // 
-            this.sqr_rt.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.sqr_rt.FlatAppearance.BorderColor = System.Drawing.Color.Lavender;
+            this.sqr_rt.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.sqr_rt.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.sqr_rt.FlatAppearance.BorderSize = 4;
             this.sqr_rt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.sqr_rt.Font = new System.Drawing.Font("Futura BdCn BT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.sqr_rt.Location = new System.Drawing.Point(231, 172);
@@ -314,9 +364,10 @@ namespace Calculator
             // 
             // percent
             // 
-            this.percent.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.percent.BackColor = System.Drawing.SystemColors.ControlDark;
             this.percent.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.percent.FlatAppearance.BorderColor = System.Drawing.Color.Lavender;
+            this.percent.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.percent.FlatAppearance.BorderSize = 4;
             this.percent.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
             this.percent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.percent.Font = new System.Drawing.Font("Futura BdCn BT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -329,9 +380,10 @@ namespace Calculator
             // 
             // clear_entry
             // 
-            this.clear_entry.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.clear_entry.BackColor = System.Drawing.SystemColors.ControlDark;
             this.clear_entry.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.clear_entry.FlatAppearance.BorderColor = System.Drawing.Color.Lavender;
+            this.clear_entry.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.clear_entry.FlatAppearance.BorderSize = 4;
             this.clear_entry.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.clear_entry.Font = new System.Drawing.Font("Futura BdCn BT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.clear_entry.Location = new System.Drawing.Point(122, 108);
@@ -343,8 +395,9 @@ namespace Calculator
             // 
             // clear
             // 
-            this.clear.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.clear.FlatAppearance.BorderColor = System.Drawing.Color.Lavender;
+            this.clear.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.clear.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.clear.FlatAppearance.BorderSize = 4;
             this.clear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.clear.Font = new System.Drawing.Font("Futura BdCn BT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.clear.Location = new System.Drawing.Point(231, 108);
@@ -357,9 +410,10 @@ namespace Calculator
             // 
             // txt_output
             // 
+            this.txt_output.BackColor = System.Drawing.Color.WhiteSmoke;
             this.txt_output.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_output.Font = new System.Drawing.Font("Futura BdCn BT", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txt_output.Location = new System.Drawing.Point(13, 13);
+            this.txt_output.Location = new System.Drawing.Point(14, 12);
             this.txt_output.Multiline = true;
             this.txt_output.Name = "txt_output";
             this.txt_output.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -372,7 +426,7 @@ namespace Calculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BackColor = System.Drawing.Color.DarkSlateGray;
             this.ClientSize = new System.Drawing.Size(467, 503);
             this.Controls.Add(this.txt_output);
             this.Controls.Add(this.percent);
