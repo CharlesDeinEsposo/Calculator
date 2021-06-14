@@ -33,10 +33,10 @@ namespace Calculator
             this.dec_point = new System.Windows.Forms.Button();
             this.number_0 = new System.Windows.Forms.Button();
             this.plus_minus = new System.Windows.Forms.Button();
-            this.add = new System.Windows.Forms.Button();
-            this.subtract = new System.Windows.Forms.Button();
-            this.multiply = new System.Windows.Forms.Button();
-            this.divide = new System.Windows.Forms.Button();
+            this.addbtn = new System.Windows.Forms.Button();
+            this.subtractbtn = new System.Windows.Forms.Button();
+            this.multiplybtn = new System.Windows.Forms.Button();
+            this.dividebtn = new System.Windows.Forms.Button();
             this.delete = new System.Windows.Forms.Button();
             this.number_1 = new System.Windows.Forms.Button();
             this.number_2 = new System.Windows.Forms.Button();
@@ -69,6 +69,7 @@ namespace Calculator
             this.equals.TabIndex = 0;
             this.equals.Text = "=";
             this.equals.UseVisualStyleBackColor = false;
+            this.equals.Click += new System.EventHandler(this.equals_Click);
             // 
             // dec_point
             // 
@@ -98,7 +99,7 @@ namespace Calculator
             this.number_0.TabIndex = 2;
             this.number_0.Text = "0";
             this.number_0.UseVisualStyleBackColor = false;
-            this.number_0.Click += new System.EventHandler(this.button_Click);
+            this.number_0.Click += new System.EventHandler(this.button0_Click);
             // 
             // plus_minus
             // 
@@ -114,61 +115,62 @@ namespace Calculator
             this.plus_minus.Text = "±";
             this.plus_minus.UseVisualStyleBackColor = false;
             // 
-            // add
+            // addbtn
             // 
-            this.add.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.add.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.add.FlatAppearance.BorderSize = 4;
-            this.add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.add.Font = new System.Drawing.Font("Futura BdCn BT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.add.Location = new System.Drawing.Point(340, 364);
-            this.add.Name = "add";
-            this.add.Size = new System.Drawing.Size(114, 58);
-            this.add.TabIndex = 4;
-            this.add.Text = "+";
-            this.add.UseVisualStyleBackColor = false;
+            this.addbtn.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.addbtn.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.addbtn.FlatAppearance.BorderSize = 4;
+            this.addbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addbtn.Font = new System.Drawing.Font("Futura BdCn BT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.addbtn.Location = new System.Drawing.Point(340, 364);
+            this.addbtn.Name = "addbtn";
+            this.addbtn.Size = new System.Drawing.Size(114, 58);
+            this.addbtn.TabIndex = 4;
+            this.addbtn.Text = "+";
+            this.addbtn.UseVisualStyleBackColor = false;
+            this.addbtn.Click += new System.EventHandler(this.addbtn_Click);
             // 
-            // subtract
+            // subtractbtn
             // 
-            this.subtract.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.subtract.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.subtract.FlatAppearance.BorderSize = 4;
-            this.subtract.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.subtract.Font = new System.Drawing.Font("Futura BdCn BT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.subtract.Location = new System.Drawing.Point(340, 300);
-            this.subtract.Name = "subtract";
-            this.subtract.Size = new System.Drawing.Size(114, 58);
-            this.subtract.TabIndex = 5;
-            this.subtract.Text = "-";
-            this.subtract.UseVisualStyleBackColor = false;
+            this.subtractbtn.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.subtractbtn.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.subtractbtn.FlatAppearance.BorderSize = 4;
+            this.subtractbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.subtractbtn.Font = new System.Drawing.Font("Futura BdCn BT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.subtractbtn.Location = new System.Drawing.Point(340, 300);
+            this.subtractbtn.Name = "subtractbtn";
+            this.subtractbtn.Size = new System.Drawing.Size(114, 58);
+            this.subtractbtn.TabIndex = 5;
+            this.subtractbtn.Text = "-";
+            this.subtractbtn.UseVisualStyleBackColor = false;
             // 
-            // multiply
+            // multiplybtn
             // 
-            this.multiply.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.multiply.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.multiply.FlatAppearance.BorderSize = 4;
-            this.multiply.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.multiply.Font = new System.Drawing.Font("Futura BdCn BT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.multiply.Location = new System.Drawing.Point(340, 236);
-            this.multiply.Name = "multiply";
-            this.multiply.Size = new System.Drawing.Size(114, 58);
-            this.multiply.TabIndex = 6;
-            this.multiply.Text = "x";
-            this.multiply.UseVisualStyleBackColor = false;
+            this.multiplybtn.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.multiplybtn.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.multiplybtn.FlatAppearance.BorderSize = 4;
+            this.multiplybtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.multiplybtn.Font = new System.Drawing.Font("Futura BdCn BT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.multiplybtn.Location = new System.Drawing.Point(340, 236);
+            this.multiplybtn.Name = "multiplybtn";
+            this.multiplybtn.Size = new System.Drawing.Size(114, 58);
+            this.multiplybtn.TabIndex = 6;
+            this.multiplybtn.Text = "x";
+            this.multiplybtn.UseVisualStyleBackColor = false;
             // 
-            // divide
+            // dividebtn
             // 
-            this.divide.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.divide.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.divide.FlatAppearance.BorderSize = 4;
-            this.divide.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.divide.Font = new System.Drawing.Font("Futura BdCn BT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.divide.Location = new System.Drawing.Point(340, 172);
-            this.divide.Name = "divide";
-            this.divide.Size = new System.Drawing.Size(114, 58);
-            this.divide.TabIndex = 7;
-            this.divide.Text = "÷";
-            this.divide.UseVisualStyleBackColor = false;
+            this.dividebtn.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.dividebtn.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.dividebtn.FlatAppearance.BorderSize = 4;
+            this.dividebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.dividebtn.Font = new System.Drawing.Font("Futura BdCn BT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.dividebtn.Location = new System.Drawing.Point(340, 172);
+            this.dividebtn.Name = "dividebtn";
+            this.dividebtn.Size = new System.Drawing.Size(114, 58);
+            this.dividebtn.TabIndex = 7;
+            this.dividebtn.Text = "÷";
+            this.dividebtn.UseVisualStyleBackColor = false;
             // 
             // delete
             // 
@@ -198,7 +200,7 @@ namespace Calculator
             this.number_1.TabIndex = 11;
             this.number_1.Text = "1";
             this.number_1.UseVisualStyleBackColor = false;
-            this.number_1.Click += new System.EventHandler(this.button_Click);
+            this.number_1.Click += new System.EventHandler(this.button1_Click);
             // 
             // number_2
             // 
@@ -213,7 +215,7 @@ namespace Calculator
             this.number_2.TabIndex = 10;
             this.number_2.Text = "2";
             this.number_2.UseVisualStyleBackColor = false;
-            this.number_2.Click += new System.EventHandler(this.button_Click);
+            this.number_2.Click += new System.EventHandler(this.button2_Click);
             // 
             // number_3
             // 
@@ -228,7 +230,7 @@ namespace Calculator
             this.number_3.TabIndex = 9;
             this.number_3.Text = "3";
             this.number_3.UseVisualStyleBackColor = false;
-            this.number_3.Click += new System.EventHandler(this.button_Click);
+            this.number_3.Click += new System.EventHandler(this.button3_Click);
             // 
             // number_4
             // 
@@ -243,7 +245,7 @@ namespace Calculator
             this.number_4.TabIndex = 14;
             this.number_4.Text = "4";
             this.number_4.UseVisualStyleBackColor = false;
-            this.number_4.Click += new System.EventHandler(this.button_Click);
+            this.number_4.Click += new System.EventHandler(this.button4_Click);
             // 
             // number_5
             // 
@@ -258,7 +260,7 @@ namespace Calculator
             this.number_5.TabIndex = 13;
             this.number_5.Text = "5";
             this.number_5.UseVisualStyleBackColor = false;
-            this.number_5.Click += new System.EventHandler(this.button_Click);
+            this.number_5.Click += new System.EventHandler(this.button5_Click);
             // 
             // number_6
             // 
@@ -273,7 +275,7 @@ namespace Calculator
             this.number_6.TabIndex = 12;
             this.number_6.Text = "6";
             this.number_6.UseVisualStyleBackColor = false;
-            this.number_6.Click += new System.EventHandler(this.button_Click);
+            this.number_6.Click += new System.EventHandler(this.button6_Click);
             // 
             // number_7
             // 
@@ -288,7 +290,7 @@ namespace Calculator
             this.number_7.TabIndex = 17;
             this.number_7.Text = "7";
             this.number_7.UseVisualStyleBackColor = false;
-            this.number_7.Click += new System.EventHandler(this.button_Click);
+            this.number_7.Click += new System.EventHandler(this.button7_Click);
             // 
             // number_8
             // 
@@ -303,7 +305,7 @@ namespace Calculator
             this.number_8.TabIndex = 16;
             this.number_8.Text = "8";
             this.number_8.UseVisualStyleBackColor = false;
-            this.number_8.Click += new System.EventHandler(this.button_Click);
+            this.number_8.Click += new System.EventHandler(this.button8_Click);
             // 
             // number_9
             // 
@@ -318,7 +320,7 @@ namespace Calculator
             this.number_9.TabIndex = 15;
             this.number_9.Text = "9";
             this.number_9.UseVisualStyleBackColor = false;
-            this.number_9.Click += new System.EventHandler(this.button_Click);
+            this.number_9.Click += new System.EventHandler(this.button9_Click);
             // 
             // fraction
             // 
@@ -410,7 +412,7 @@ namespace Calculator
             // 
             // txt_output
             // 
-            this.txt_output.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txt_output.BackColor = System.Drawing.SystemColors.ControlLight;
             this.txt_output.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_output.Font = new System.Drawing.Font("Futura BdCn BT", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txt_output.Location = new System.Drawing.Point(14, 12);
@@ -445,10 +447,10 @@ namespace Calculator
             this.Controls.Add(this.number_2);
             this.Controls.Add(this.number_3);
             this.Controls.Add(this.delete);
-            this.Controls.Add(this.divide);
-            this.Controls.Add(this.multiply);
-            this.Controls.Add(this.subtract);
-            this.Controls.Add(this.add);
+            this.Controls.Add(this.dividebtn);
+            this.Controls.Add(this.multiplybtn);
+            this.Controls.Add(this.subtractbtn);
+            this.Controls.Add(this.addbtn);
             this.Controls.Add(this.plus_minus);
             this.Controls.Add(this.number_0);
             this.Controls.Add(this.dec_point);
@@ -468,10 +470,10 @@ namespace Calculator
         private System.Windows.Forms.Button dec_point;
         private System.Windows.Forms.Button number_0;
         private System.Windows.Forms.Button plus_minus;
-        private System.Windows.Forms.Button add;
-        private System.Windows.Forms.Button subtract;
-        private System.Windows.Forms.Button multiply;
-        private System.Windows.Forms.Button divide;
+        private System.Windows.Forms.Button addbtn;
+        private System.Windows.Forms.Button subtractbtn;
+        private System.Windows.Forms.Button multiplybtn;
+        private System.Windows.Forms.Button dividebtn;
         private System.Windows.Forms.Button delete;
         private System.Windows.Forms.Button number_1;
         private System.Windows.Forms.Button number_2;
