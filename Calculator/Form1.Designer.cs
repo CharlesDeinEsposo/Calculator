@@ -30,7 +30,6 @@ namespace Calculator
         private void InitializeComponent()
         {
             this.equals = new System.Windows.Forms.Button();
-            this.dec_point = new System.Windows.Forms.Button();
             this.number_0 = new System.Windows.Forms.Button();
             this.plus_minus = new System.Windows.Forms.Button();
             this.addbtn = new System.Windows.Forms.Button();
@@ -54,6 +53,7 @@ namespace Calculator
             this.clear_entry = new System.Windows.Forms.Button();
             this.clear = new System.Windows.Forms.Button();
             this.txt_output = new System.Windows.Forms.TextBox();
+            this.number_dec = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // equals
@@ -71,21 +71,6 @@ namespace Calculator
             this.equals.UseVisualStyleBackColor = false;
             this.equals.Click += new System.EventHandler(this.equals_Click);
             // 
-            // dec_point
-            // 
-            this.dec_point.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.dec_point.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.dec_point.FlatAppearance.BorderSize = 4;
-            this.dec_point.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.dec_point.Font = new System.Drawing.Font("Futura BdCn BT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.dec_point.Location = new System.Drawing.Point(231, 428);
-            this.dec_point.Name = "dec_point";
-            this.dec_point.Size = new System.Drawing.Size(103, 58);
-            this.dec_point.TabIndex = 1;
-            this.dec_point.Text = ".";
-            this.dec_point.UseVisualStyleBackColor = false;
-            this.dec_point.Click += new System.EventHandler(this.dec_point_Click);
-            // 
             // number_0
             // 
             this.number_0.BackColor = System.Drawing.Color.Orange;
@@ -99,7 +84,7 @@ namespace Calculator
             this.number_0.TabIndex = 2;
             this.number_0.Text = "0";
             this.number_0.UseVisualStyleBackColor = false;
-            this.number_0.Click += new System.EventHandler(this.button0_Click);
+            this.number_0.Click += new System.EventHandler(this.numbers_Click);
             // 
             // plus_minus
             // 
@@ -200,7 +185,7 @@ namespace Calculator
             this.number_1.TabIndex = 11;
             this.number_1.Text = "1";
             this.number_1.UseVisualStyleBackColor = false;
-            this.number_1.Click += new System.EventHandler(this.button1_Click);
+            this.number_1.Click += new System.EventHandler(this.numbers_Click);
             // 
             // number_2
             // 
@@ -215,7 +200,7 @@ namespace Calculator
             this.number_2.TabIndex = 10;
             this.number_2.Text = "2";
             this.number_2.UseVisualStyleBackColor = false;
-            this.number_2.Click += new System.EventHandler(this.button2_Click);
+            this.number_2.Click += new System.EventHandler(this.numbers_Click);
             // 
             // number_3
             // 
@@ -230,7 +215,7 @@ namespace Calculator
             this.number_3.TabIndex = 9;
             this.number_3.Text = "3";
             this.number_3.UseVisualStyleBackColor = false;
-            this.number_3.Click += new System.EventHandler(this.button3_Click);
+            this.number_3.Click += new System.EventHandler(this.numbers_Click);
             // 
             // number_4
             // 
@@ -245,7 +230,7 @@ namespace Calculator
             this.number_4.TabIndex = 14;
             this.number_4.Text = "4";
             this.number_4.UseVisualStyleBackColor = false;
-            this.number_4.Click += new System.EventHandler(this.button4_Click);
+            this.number_4.Click += new System.EventHandler(this.numbers_Click);
             // 
             // number_5
             // 
@@ -260,7 +245,7 @@ namespace Calculator
             this.number_5.TabIndex = 13;
             this.number_5.Text = "5";
             this.number_5.UseVisualStyleBackColor = false;
-            this.number_5.Click += new System.EventHandler(this.button5_Click);
+            this.number_5.Click += new System.EventHandler(this.numbers_Click);
             // 
             // number_6
             // 
@@ -275,7 +260,7 @@ namespace Calculator
             this.number_6.TabIndex = 12;
             this.number_6.Text = "6";
             this.number_6.UseVisualStyleBackColor = false;
-            this.number_6.Click += new System.EventHandler(this.button6_Click);
+            this.number_6.Click += new System.EventHandler(this.numbers_Click);
             // 
             // number_7
             // 
@@ -290,7 +275,7 @@ namespace Calculator
             this.number_7.TabIndex = 17;
             this.number_7.Text = "7";
             this.number_7.UseVisualStyleBackColor = false;
-            this.number_7.Click += new System.EventHandler(this.button7_Click);
+            this.number_7.Click += new System.EventHandler(this.numbers_Click);
             // 
             // number_8
             // 
@@ -305,7 +290,7 @@ namespace Calculator
             this.number_8.TabIndex = 16;
             this.number_8.Text = "8";
             this.number_8.UseVisualStyleBackColor = false;
-            this.number_8.Click += new System.EventHandler(this.button8_Click);
+            this.number_8.Click += new System.EventHandler(this.numbers_Click);
             // 
             // number_9
             // 
@@ -320,7 +305,7 @@ namespace Calculator
             this.number_9.TabIndex = 15;
             this.number_9.Text = "9";
             this.number_9.UseVisualStyleBackColor = false;
-            this.number_9.Click += new System.EventHandler(this.button9_Click);
+            this.number_9.Click += new System.EventHandler(this.numbers_Click);
             // 
             // fraction
             // 
@@ -418,11 +403,27 @@ namespace Calculator
             this.txt_output.Location = new System.Drawing.Point(14, 12);
             this.txt_output.Multiline = true;
             this.txt_output.Name = "txt_output";
-            this.txt_output.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txt_output.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txt_output.Size = new System.Drawing.Size(441, 89);
             this.txt_output.TabIndex = 24;
             this.txt_output.Text = "0";
-            this.txt_output.TextChanged += new System.EventHandler(this.txt_output_TextChanged);
+            this.txt_output.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // number_dec
+            // 
+            this.number_dec.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.number_dec.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.number_dec.FlatAppearance.BorderSize = 4;
+            this.number_dec.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.number_dec.Font = new System.Drawing.Font("Futura BdCn BT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.number_dec.Location = new System.Drawing.Point(231, 428);
+            this.number_dec.Name = "number_dec";
+            this.number_dec.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.number_dec.Size = new System.Drawing.Size(103, 58);
+            this.number_dec.TabIndex = 25;
+            this.number_dec.Text = ".";
+            this.number_dec.UseVisualStyleBackColor = false;
+            this.number_dec.Click += new System.EventHandler(this.numbers_Click);
             // 
             // Form1
             // 
@@ -430,6 +431,7 @@ namespace Calculator
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSlateGray;
             this.ClientSize = new System.Drawing.Size(467, 503);
+            this.Controls.Add(this.number_dec);
             this.Controls.Add(this.txt_output);
             this.Controls.Add(this.percent);
             this.Controls.Add(this.clear_entry);
@@ -453,12 +455,10 @@ namespace Calculator
             this.Controls.Add(this.addbtn);
             this.Controls.Add(this.plus_minus);
             this.Controls.Add(this.number_0);
-            this.Controls.Add(this.dec_point);
             this.Controls.Add(this.equals);
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "Calculator (Sample)";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -467,7 +467,6 @@ namespace Calculator
         #endregion
 
         private System.Windows.Forms.Button equals;
-        private System.Windows.Forms.Button dec_point;
         private System.Windows.Forms.Button number_0;
         private System.Windows.Forms.Button plus_minus;
         private System.Windows.Forms.Button addbtn;
@@ -491,6 +490,7 @@ namespace Calculator
         private System.Windows.Forms.Button clear_entry;
         private System.Windows.Forms.Button clear;
         private System.Windows.Forms.TextBox txt_output;
+        private System.Windows.Forms.Button number_dec;
     }
 }
 
