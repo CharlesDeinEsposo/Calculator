@@ -31,6 +31,11 @@ namespace Calculator
                 if (txt_output.Text == "0")
                     txt_output.Text = txt_output.Text + nmbrs.Text;
             }
+            else if (txt_output.Text == "0")
+            {
+                txt_output.Clear();
+                txt_output.Text = txt_output.Text + nmbrs.Text;
+            }
             else
                 txt_output.Text = txt_output.Text + nmbrs.Text;
         }
@@ -41,8 +46,14 @@ namespace Calculator
 
         private void delete_Click(object sender, EventArgs e)
         {
-
+            if (txt_output.Text.Length > 0)
+            {
+                txt_output.Text = txt_output.Text.Remove(txt_output.Text.Length - 1, 1);
+            }
+            if (txt_output.Text.Length == 0)
+                txt_output.Text = "0";
         }
+
         double value1 = 0;
         double value2 = 0;
 
@@ -54,7 +65,7 @@ namespace Calculator
 
         private void equals_Click(object sender, EventArgs e)
         {
-            if (add == true) ;
+            if (add == true);
             {
                 value2 = 1 + double.Parse(txt_output.Text);
             }
