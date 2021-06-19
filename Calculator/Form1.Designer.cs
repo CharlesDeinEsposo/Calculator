@@ -113,7 +113,7 @@ namespace Calculator
             this.addbtn.TabIndex = 4;
             this.addbtn.Text = "+";
             this.addbtn.UseVisualStyleBackColor = false;
-            this.addbtn.Click += new System.EventHandler(this.addbtn_Click);
+            this.addbtn.Click += new System.EventHandler(this.bsc_oprtr_clck);
             // 
             // subtractbtn
             // 
@@ -128,6 +128,7 @@ namespace Calculator
             this.subtractbtn.TabIndex = 5;
             this.subtractbtn.Text = "-";
             this.subtractbtn.UseVisualStyleBackColor = false;
+            this.subtractbtn.Click += new System.EventHandler(this.bsc_oprtr_clck);
             // 
             // multiplybtn
             // 
@@ -142,6 +143,7 @@ namespace Calculator
             this.multiplybtn.TabIndex = 6;
             this.multiplybtn.Text = "x";
             this.multiplybtn.UseVisualStyleBackColor = false;
+            this.multiplybtn.Click += new System.EventHandler(this.bsc_oprtr_clck);
             // 
             // dividebtn
             // 
@@ -156,6 +158,7 @@ namespace Calculator
             this.dividebtn.TabIndex = 7;
             this.dividebtn.Text = "÷";
             this.dividebtn.UseVisualStyleBackColor = false;
+            this.dividebtn.Click += new System.EventHandler(this.bsc_oprtr_clck);
             // 
             // delete
             // 
@@ -320,6 +323,7 @@ namespace Calculator
             this.fraction.TabIndex = 20;
             this.fraction.Text = "1 / x";
             this.fraction.UseVisualStyleBackColor = false;
+            this.fraction.Click += new System.EventHandler(this.adv_oprtr_clck);
             // 
             // exponent
             // 
@@ -334,6 +338,7 @@ namespace Calculator
             this.exponent.TabIndex = 19;
             this.exponent.Text = "x^2";
             this.exponent.UseVisualStyleBackColor = false;
+            this.exponent.Click += new System.EventHandler(this.adv_oprtr_clck);
             // 
             // sqr_rt
             // 
@@ -348,6 +353,7 @@ namespace Calculator
             this.sqr_rt.TabIndex = 18;
             this.sqr_rt.Text = "√x";
             this.sqr_rt.UseVisualStyleBackColor = false;
+            this.sqr_rt.Click += new System.EventHandler(this.adv_oprtr_clck);
             // 
             // percent
             // 
@@ -364,6 +370,7 @@ namespace Calculator
             this.percent.TabIndex = 23;
             this.percent.Text = "%";
             this.percent.UseVisualStyleBackColor = false;
+            this.percent.Click += new System.EventHandler(this.adv_oprtr_clck);
             // 
             // clear_entry
             // 

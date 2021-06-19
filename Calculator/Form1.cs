@@ -13,7 +13,8 @@ namespace Calculator
     public partial class Form1 : Form
     {
         String operation = "";
-        Double num1, num2;
+        Double num1 = 0;
+        bool  basic_operation_clck = false;
 
         public Form1()
         {
@@ -54,32 +55,46 @@ namespace Calculator
                 txt_output.Text = "0";
         }
 
-        double value1 = 0;
-        double value2 = 0;
-
-        bool add = false;
-        bool subtract = false;
-        bool divide = false;
-        bool multiply = false;
-
+        private void bsc_oprtr_clck(object sender, EventArgs e)
+        {
+            Button b = (Button)sender;
+            operation = b.Text;
+            num1 = Double.Parse(txt_output.Text);
+            basic_operation_clck = true;
+            txt_output.Text = "";
+        }
+        private void adv_oprtr_clck(object sender, EventArgs e)
+        {
+            Button b = (Button)sender;
+            operation = b.Text;
+            num1 = Double.Parse(txt_output.Text);
+            basic_operation_clck = true;
+        }
 
         private void equals_Click(object sender, EventArgs e)
         {
-            if (add == true);
+            switch(operation)
             {
-                value2 = 1 + double.Parse(txt_output.Text);
+            //bsc_oprtr
+                case "+":
+                    txt_output.Text = (num1 + Double.Parse(txt_output.Text)).ToString();
+                    break;
+
+                case "-":
+                    txt_output.Text = (num1 - Double.Parse(txt_output.Text)).ToString();
+                    break;
+
+                case "÷":
+                    txt_output.Text = (num1 / Double.Parse(txt_output.Text)).ToString();
+                    break;
+
+                case "x":
+                    txt_output.Text = (num1 * Double.Parse(txt_output.Text)).ToString();
+                    break;
+
+
             }
         }
 
-        private void addbtn_Click(object sender, EventArgs e)
-        {
-            bool add = true;
-            bool subtract = false;
-            bool divide = false;
-            bool multiply = false;
-
-            value1 = 1 + double.Parse(txt_output.Text);
-
-        }
     }
 }
