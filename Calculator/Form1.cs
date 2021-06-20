@@ -69,6 +69,28 @@ namespace Calculator
             operation = b.Text;
             num1 = Double.Parse(txt_output.Text);
             basic_operation_clck = true;
+
+            switch (operation)
+            {
+                case "±":
+                    txt_output.Text = (num1 * -1).ToString();
+                    break;
+
+                case "x^2":
+                    txt_output.Text = (num1 * num1).ToString();
+                    break;
+
+                case "√x":
+                    txt_output.Text = Math.Sqrt(num1).ToString();
+                    break;
+
+                case "%":
+                    txt_output.Text = (num1 * 0.01).ToString();
+                    break;
+
+                default:
+                    break;
+            }
         }
 
         private void equals_Click(object sender, EventArgs e)
@@ -92,6 +114,8 @@ namespace Calculator
                     txt_output.Text = (num1 * Double.Parse(txt_output.Text)).ToString();
                     break;
 
+                default:
+                    break;
 
             }
         }

@@ -99,6 +99,7 @@ namespace Calculator
             this.plus_minus.TabIndex = 3;
             this.plus_minus.Text = "±";
             this.plus_minus.UseVisualStyleBackColor = false;
+            this.plus_minus.Click += new System.EventHandler(this.adv_oprtr_clck);
             // 
             // addbtn
             // 
