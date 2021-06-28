@@ -54,7 +54,7 @@ namespace Calculator
             this.clear = new System.Windows.Forms.Button();
             this.txt_output = new System.Windows.Forms.TextBox();
             this.number_dec = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt_output2 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // equals
@@ -388,6 +388,7 @@ namespace Calculator
             this.clear_entry.TabIndex = 22;
             this.clear_entry.Text = "CE";
             this.clear_entry.UseVisualStyleBackColor = false;
+            this.clear_entry.Click += new System.EventHandler(this.clear_entry_Click);
             // 
             // clear
             // 
@@ -434,19 +435,18 @@ namespace Calculator
             this.number_dec.UseVisualStyleBackColor = false;
             this.number_dec.Click += new System.EventHandler(this.numbers_Click);
             // 
-            // textBox1
+            // txt_output2
             // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Futura BdCn BT", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox1.Location = new System.Drawing.Point(14, 12);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.textBox1.Size = new System.Drawing.Size(441, 48);
-            this.textBox1.TabIndex = 26;
-            this.textBox1.Text = "0";
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txt_output2.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.txt_output2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_output2.Font = new System.Drawing.Font("Futura BdCn BT", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txt_output2.Location = new System.Drawing.Point(14, 12);
+            this.txt_output2.Multiline = true;
+            this.txt_output2.Name = "txt_output2";
+            this.txt_output2.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txt_output2.Size = new System.Drawing.Size(441, 48);
+            this.txt_output2.TabIndex = 26;
+            this.txt_output2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // Form1
             // 
@@ -454,7 +454,7 @@ namespace Calculator
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSlateGray;
             this.ClientSize = new System.Drawing.Size(467, 503);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txt_output2);
             this.Controls.Add(this.number_dec);
             this.Controls.Add(this.txt_output);
             this.Controls.Add(this.percent);
@@ -515,7 +515,7 @@ namespace Calculator
         private System.Windows.Forms.Button clear;
         private System.Windows.Forms.TextBox txt_output;
         private System.Windows.Forms.Button number_dec;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt_output2;
     }
 }
 
