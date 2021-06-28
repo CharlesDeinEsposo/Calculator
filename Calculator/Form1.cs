@@ -45,7 +45,10 @@ namespace Calculator
             txt_output.Text = "0";
             txt_output2.Text = "";
         }
-
+        private void clear_entry_Click(object sender, EventArgs e)
+        {
+            txt_output2.Text = "";
+        }
 
         private void delete_Click(object sender, EventArgs e)
         {
