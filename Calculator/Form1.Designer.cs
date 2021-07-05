@@ -29,6 +29,7 @@ namespace Calculator
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.equals = new System.Windows.Forms.Button();
             this.number_0 = new System.Windows.Forms.Button();
             this.plus_minus = new System.Windows.Forms.Button();
@@ -60,6 +61,10 @@ namespace Calculator
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.Mistory_Color = new System.Windows.Forms.TextBox();
+            this.Memory_Color = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // equals
@@ -412,7 +417,7 @@ namespace Calculator
             // 
             // txt_output
             // 
-            this.txt_output.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.txt_output.BackColor = System.Drawing.Color.Orange;
             this.txt_output.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_output.Font = new System.Drawing.Font("Futura BdCn BT", 33.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txt_output.Location = new System.Drawing.Point(14, 41);
@@ -442,7 +447,7 @@ namespace Calculator
             // 
             // txt_output2
             // 
-            this.txt_output2.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.txt_output2.BackColor = System.Drawing.Color.Orange;
             this.txt_output2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_output2.Font = new System.Drawing.Font("Futura BdCn BT", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txt_output2.Location = new System.Drawing.Point(14, 12);
@@ -457,14 +462,14 @@ namespace Calculator
             // 
             this.button1.BackColor = System.Drawing.SystemColors.ControlDark;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.button1.FlatAppearance.BorderSize = 4;
             this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Futura BdCn BT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(12, 117);
+            this.button1.Location = new System.Drawing.Point(12, 107);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(70, 36);
+            this.button1.Size = new System.Drawing.Size(70, 46);
             this.button1.TabIndex = 27;
             this.button1.Text = "MC";
             this.button1.UseVisualStyleBackColor = false;
@@ -473,14 +478,14 @@ namespace Calculator
             // 
             this.button2.BackColor = System.Drawing.SystemColors.ControlDark;
             this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button2.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.button2.FlatAppearance.BorderSize = 4;
             this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Futura BdCn BT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button2.Location = new System.Drawing.Point(88, 117);
+            this.button2.Location = new System.Drawing.Point(88, 107);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(70, 36);
+            this.button2.Size = new System.Drawing.Size(70, 46);
             this.button2.TabIndex = 28;
             this.button2.Text = "MR";
             this.button2.UseVisualStyleBackColor = false;
@@ -489,14 +494,14 @@ namespace Calculator
             // 
             this.button3.BackColor = System.Drawing.SystemColors.ControlDark;
             this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button3.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.button3.FlatAppearance.BorderSize = 4;
             this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Futura BdCn BT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button3.Location = new System.Drawing.Point(240, 117);
+            this.button3.Location = new System.Drawing.Point(240, 107);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(70, 36);
+            this.button3.Size = new System.Drawing.Size(70, 46);
             this.button3.TabIndex = 30;
             this.button3.Text = "M-";
             this.button3.UseVisualStyleBackColor = false;
@@ -505,14 +510,14 @@ namespace Calculator
             // 
             this.button4.BackColor = System.Drawing.SystemColors.ControlDark;
             this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button4.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.button4.FlatAppearance.BorderSize = 4;
             this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Futura BdCn BT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button4.Location = new System.Drawing.Point(164, 117);
+            this.button4.Location = new System.Drawing.Point(164, 107);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(70, 36);
+            this.button4.Size = new System.Drawing.Size(70, 46);
             this.button4.TabIndex = 29;
             this.button4.Text = "M+";
             this.button4.UseVisualStyleBackColor = false;
@@ -521,24 +526,86 @@ namespace Calculator
             // 
             this.button5.BackColor = System.Drawing.SystemColors.ControlDark;
             this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button5.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button5.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.button5.FlatAppearance.BorderSize = 4;
             this.button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Futura BdCn BT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button5.Location = new System.Drawing.Point(316, 117);
+            this.button5.Location = new System.Drawing.Point(316, 107);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(70, 36);
+            this.button5.Size = new System.Drawing.Size(70, 46);
             this.button5.TabIndex = 32;
             this.button5.Text = "MS";
             this.button5.UseVisualStyleBackColor = false;
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.Transparent;
+            this.button6.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button6.FlatAppearance.BorderSize = 0;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Font = new System.Drawing.Font("Futura BdCn BT", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button6.ForeColor = System.Drawing.Color.Orange;
+            this.button6.Location = new System.Drawing.Point(392, 12);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(123, 50);
+            this.button6.TabIndex = 33;
+            this.button6.Text = "History";
+            this.button6.UseVisualStyleBackColor = false;
+            // 
+            // button7
+            // 
+            this.button7.BackColor = System.Drawing.Color.Transparent;
+            this.button7.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button7.FlatAppearance.BorderSize = 0;
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.Font = new System.Drawing.Font("Futura BdCn BT", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button7.ForeColor = System.Drawing.Color.Orange;
+            this.button7.Location = new System.Drawing.Point(521, 12);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(123, 50);
+            this.button7.TabIndex = 34;
+            this.button7.Text = "Memory";
+            this.button7.UseVisualStyleBackColor = false;
+            // 
+            // Mistory_Color
+            // 
+            this.Mistory_Color.BackColor = System.Drawing.Color.Orange;
+            this.Mistory_Color.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Mistory_Color.Font = new System.Drawing.Font("Futura BdCn BT", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Mistory_Color.Location = new System.Drawing.Point(412, 58);
+            this.Mistory_Color.Multiline = true;
+            this.Mistory_Color.Name = "Mistory_Color";
+            this.Mistory_Color.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.Mistory_Color.Size = new System.Drawing.Size(80, 3);
+            this.Mistory_Color.TabIndex = 9;
+            this.Mistory_Color.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // Memory_Color
+            // 
+            this.Memory_Color.BackColor = System.Drawing.Color.Orange;
+            this.Memory_Color.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Memory_Color.Font = new System.Drawing.Font("Futura BdCn BT", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Memory_Color.Location = new System.Drawing.Point(534, 58);
+            this.Memory_Color.Multiline = true;
+            this.Memory_Color.Name = "Memory_Color";
+            this.Memory_Color.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.Memory_Color.Size = new System.Drawing.Size(95, 3);
+            this.Memory_Color.TabIndex = 36;
+            this.Memory_Color.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.ClientSize = new System.Drawing.Size(399, 543);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(655, 543);
+            this.Controls.Add(this.Memory_Color);
+            this.Controls.Add(this.Mistory_Color);
+            this.Controls.Add(this.button7);
+            this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button4);
@@ -611,6 +678,10 @@ namespace Calculator
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.TextBox Mistory_Color;
+        private System.Windows.Forms.TextBox Memory_Color;
     }
 }
 

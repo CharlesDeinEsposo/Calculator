@@ -79,5 +79,15 @@ namespace Calculator.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fractal_purple_dark_144688_3840x2160 {
+            get {
+                object obj = ResourceManager.GetObject("fractal_purple_dark_144688_3840x2160", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }
