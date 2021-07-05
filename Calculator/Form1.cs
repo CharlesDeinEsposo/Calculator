@@ -104,6 +104,11 @@ namespace Calculator
                     txt_output.Text = (num1 * 0.01).ToString();
                     break;
 
+                case "1 / x":
+                    txt_output.Text = (1 / num1).ToString();
+                    txt_output2.Text = ("1/(" + num1 + ")");
+                    break;
+
                 default:
                     break;
             }

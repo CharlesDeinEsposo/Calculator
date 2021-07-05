@@ -764,6 +764,7 @@ namespace Calculator
             this.Controls.Add(this.number_0);
             this.Controls.Add(this.equals);
             this.Controls.Add(this.Memory_Label);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "Calculator (Sample)";
