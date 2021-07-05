@@ -66,7 +66,16 @@ namespace Calculator
             operation = b.Text;
             num1 = Double.Parse(txt_output.Text);
             basic_operation_clck = true;
-            txt_output2.Text = txt_output.Text + b.Text;
+            txt_output2.Text = txt_output.Text + " " + b.Text;
+
+            //pending
+            if (txt_output2.Text == txt_output.Text + " " + b.Text)
+            {
+
+            }
+            //
+
+
             txt_output.Text = "";
 
         }
@@ -102,7 +111,9 @@ namespace Calculator
 
         private void equals_Click(object sender, EventArgs e)
         {
+
             txt_output2.Text = "";
+            
 
             switch (operation)
             {
