@@ -69,7 +69,7 @@ namespace Calculator
             txt_output2.Text = txt_output.Text + " " + b.Text;
 
             //pending
-            if (txt_output2.Text == txt_output.Text + " " + b.Text)
+            if (num1 != 0)
             {
 
             }
@@ -141,5 +141,36 @@ namespace Calculator
             }
         }
 
+        private void Hisory_TextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Memory_TextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void History_Button_Click(object sender, EventArgs e)
+        {
+            Memory_Color.Visible = false;
+            Memory_Label.Visible = false;
+            Memory_TextBox.Visible = false;
+
+            History_Color.Visible = true;
+            History_Label.Visible = true;
+            Hisory_TextBox.Visible = true;
+        }
+
+        private void Memory_Button_Click(object sender, EventArgs e)
+        {
+            Memory_Color.Visible = true;
+            Memory_Label.Visible = true;
+            Memory_TextBox.Visible = true;
+
+            History_Color.Visible = false;
+            History_Label.Visible = false;
+            Hisory_TextBox.Visible = false;
+        }
     }
 }

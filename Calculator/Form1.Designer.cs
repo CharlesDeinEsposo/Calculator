@@ -29,7 +29,6 @@ namespace Calculator
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.equals = new System.Windows.Forms.Button();
             this.number_0 = new System.Windows.Forms.Button();
             this.plus_minus = new System.Windows.Forms.Button();
@@ -61,16 +60,25 @@ namespace Calculator
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.Mistory_Color = new System.Windows.Forms.TextBox();
+            this.History_Button = new System.Windows.Forms.Button();
+            this.Memory_Button = new System.Windows.Forms.Button();
+            this.History_Color = new System.Windows.Forms.TextBox();
             this.Memory_Color = new System.Windows.Forms.TextBox();
+            this.Hisory_TextBox = new System.Windows.Forms.TextBox();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.ResultBox_Border = new System.Windows.Forms.TextBox();
+            this.ResultBox_Border1 = new System.Windows.Forms.TextBox();
+            this.ResultBox_Border4 = new System.Windows.Forms.TextBox();
+            this.ResultBox_Border2 = new System.Windows.Forms.TextBox();
+            this.Memory_TextBox = new System.Windows.Forms.TextBox();
+            this.History_Label = new System.Windows.Forms.Label();
+            this.Memory_Label = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // equals
             // 
-            this.equals.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.equals.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.equals.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(62)))), ((int)(((byte)(62)))));
+            this.equals.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveBorder;
             this.equals.FlatAppearance.BorderSize = 4;
             this.equals.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.equals.Font = new System.Drawing.Font("Futura BdCn BT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -99,8 +107,8 @@ namespace Calculator
             // 
             // plus_minus
             // 
-            this.plus_minus.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.plus_minus.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.plus_minus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(62)))), ((int)(((byte)(62)))));
+            this.plus_minus.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveBorder;
             this.plus_minus.FlatAppearance.BorderSize = 4;
             this.plus_minus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.plus_minus.Font = new System.Drawing.Font("Futura BdCn BT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -114,8 +122,8 @@ namespace Calculator
             // 
             // addbtn
             // 
-            this.addbtn.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.addbtn.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.addbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(62)))), ((int)(((byte)(62)))));
+            this.addbtn.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveBorder;
             this.addbtn.FlatAppearance.BorderSize = 4;
             this.addbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addbtn.Font = new System.Drawing.Font("Futura BdCn BT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -129,8 +137,8 @@ namespace Calculator
             // 
             // subtractbtn
             // 
-            this.subtractbtn.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.subtractbtn.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.subtractbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(62)))), ((int)(((byte)(62)))));
+            this.subtractbtn.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveBorder;
             this.subtractbtn.FlatAppearance.BorderSize = 4;
             this.subtractbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.subtractbtn.Font = new System.Drawing.Font("Futura BdCn BT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -144,8 +152,8 @@ namespace Calculator
             // 
             // multiplybtn
             // 
-            this.multiplybtn.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.multiplybtn.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.multiplybtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(62)))), ((int)(((byte)(62)))));
+            this.multiplybtn.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveBorder;
             this.multiplybtn.FlatAppearance.BorderSize = 4;
             this.multiplybtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.multiplybtn.Font = new System.Drawing.Font("Futura BdCn BT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -159,8 +167,8 @@ namespace Calculator
             // 
             // dividebtn
             // 
-            this.dividebtn.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.dividebtn.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.dividebtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(62)))), ((int)(((byte)(62)))));
+            this.dividebtn.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveBorder;
             this.dividebtn.FlatAppearance.BorderSize = 4;
             this.dividebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.dividebtn.Font = new System.Drawing.Font("Futura BdCn BT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -174,8 +182,8 @@ namespace Calculator
             // 
             // delete
             // 
-            this.delete.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.delete.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.delete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(62)))), ((int)(((byte)(62)))));
+            this.delete.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveBorder;
             this.delete.FlatAppearance.BorderSize = 4;
             this.delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.delete.Font = new System.Drawing.Font("Futura BdCn BT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -250,7 +258,7 @@ namespace Calculator
             // number_5
             // 
             this.number_5.BackColor = System.Drawing.Color.Orange;
-            this.number_5.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.number_5.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.number_5.FlatAppearance.BorderSize = 4;
             this.number_5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.number_5.Font = new System.Drawing.Font("Futura BdCn BT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -324,8 +332,8 @@ namespace Calculator
             // 
             // fraction
             // 
-            this.fraction.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.fraction.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.fraction.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(62)))), ((int)(((byte)(62)))));
+            this.fraction.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveBorder;
             this.fraction.FlatAppearance.BorderSize = 4;
             this.fraction.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.fraction.Font = new System.Drawing.Font("Futura BdCn BT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -339,8 +347,8 @@ namespace Calculator
             // 
             // exponent
             // 
-            this.exponent.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.exponent.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.exponent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(62)))), ((int)(((byte)(62)))));
+            this.exponent.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveBorder;
             this.exponent.FlatAppearance.BorderSize = 4;
             this.exponent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.exponent.Font = new System.Drawing.Font("Futura BdCn BT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -354,8 +362,8 @@ namespace Calculator
             // 
             // sqr_rt
             // 
-            this.sqr_rt.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.sqr_rt.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.sqr_rt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(62)))), ((int)(((byte)(62)))));
+            this.sqr_rt.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveBorder;
             this.sqr_rt.FlatAppearance.BorderSize = 4;
             this.sqr_rt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.sqr_rt.Font = new System.Drawing.Font("Futura BdCn BT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -369,9 +377,9 @@ namespace Calculator
             // 
             // percent
             // 
-            this.percent.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.percent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(62)))), ((int)(((byte)(62)))));
             this.percent.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.percent.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.percent.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveBorder;
             this.percent.FlatAppearance.BorderSize = 4;
             this.percent.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
             this.percent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -386,9 +394,9 @@ namespace Calculator
             // 
             // clear_entry
             // 
-            this.clear_entry.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.clear_entry.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(62)))), ((int)(((byte)(62)))));
             this.clear_entry.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.clear_entry.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.clear_entry.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveBorder;
             this.clear_entry.FlatAppearance.BorderSize = 4;
             this.clear_entry.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.clear_entry.Font = new System.Drawing.Font("Futura BdCn BT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -402,8 +410,8 @@ namespace Calculator
             // 
             // clear
             // 
-            this.clear.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.clear.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.clear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(62)))), ((int)(((byte)(62)))));
+            this.clear.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveBorder;
             this.clear.FlatAppearance.BorderSize = 4;
             this.clear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.clear.Font = new System.Drawing.Font("Futura BdCn BT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -431,8 +439,8 @@ namespace Calculator
             // 
             // number_dec
             // 
-            this.number_dec.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.number_dec.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.number_dec.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(62)))), ((int)(((byte)(62)))));
+            this.number_dec.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveBorder;
             this.number_dec.FlatAppearance.BorderSize = 4;
             this.number_dec.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.number_dec.Font = new System.Drawing.Font("Futura BdCn BT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -460,9 +468,9 @@ namespace Calculator
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(62)))), ((int)(((byte)(62)))));
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveBorder;
             this.button1.FlatAppearance.BorderSize = 4;
             this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -476,9 +484,9 @@ namespace Calculator
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(62)))), ((int)(((byte)(62)))));
             this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button2.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button2.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveBorder;
             this.button2.FlatAppearance.BorderSize = 4;
             this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -492,9 +500,9 @@ namespace Calculator
             // 
             // button3
             // 
-            this.button3.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(62)))), ((int)(((byte)(62)))));
             this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button3.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button3.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveBorder;
             this.button3.FlatAppearance.BorderSize = 4;
             this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -508,9 +516,9 @@ namespace Calculator
             // 
             // button4
             // 
-            this.button4.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(62)))), ((int)(((byte)(62)))));
             this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button4.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button4.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveBorder;
             this.button4.FlatAppearance.BorderSize = 4;
             this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -524,9 +532,9 @@ namespace Calculator
             // 
             // button5
             // 
-            this.button5.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(62)))), ((int)(((byte)(62)))));
             this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button5.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button5.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveBorder;
             this.button5.FlatAppearance.BorderSize = 4;
             this.button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -538,82 +546,200 @@ namespace Calculator
             this.button5.Text = "MS";
             this.button5.UseVisualStyleBackColor = false;
             // 
-            // button6
+            // History_Button
             // 
-            this.button6.BackColor = System.Drawing.Color.Transparent;
-            this.button6.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Futura BdCn BT", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button6.ForeColor = System.Drawing.Color.Orange;
-            this.button6.Location = new System.Drawing.Point(392, 12);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(123, 50);
-            this.button6.TabIndex = 33;
-            this.button6.Text = "History";
-            this.button6.UseVisualStyleBackColor = false;
+            this.History_Button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(62)))), ((int)(((byte)(62)))));
+            this.History_Button.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveBorder;
+            this.History_Button.FlatAppearance.BorderSize = 4;
+            this.History_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.History_Button.Font = new System.Drawing.Font("Futura BdCn BT", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.History_Button.ForeColor = System.Drawing.Color.Orange;
+            this.History_Button.Location = new System.Drawing.Point(402, 11);
+            this.History_Button.Name = "History_Button";
+            this.History_Button.Size = new System.Drawing.Size(123, 55);
+            this.History_Button.TabIndex = 33;
+            this.History_Button.Text = "History";
+            this.History_Button.UseVisualStyleBackColor = false;
+            this.History_Button.Click += new System.EventHandler(this.History_Button_Click);
             // 
-            // button7
+            // Memory_Button
             // 
-            this.button7.BackColor = System.Drawing.Color.Transparent;
-            this.button7.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("Futura BdCn BT", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button7.ForeColor = System.Drawing.Color.Orange;
-            this.button7.Location = new System.Drawing.Point(521, 12);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(123, 50);
-            this.button7.TabIndex = 34;
-            this.button7.Text = "Memory";
-            this.button7.UseVisualStyleBackColor = false;
+            this.Memory_Button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(62)))), ((int)(((byte)(62)))));
+            this.Memory_Button.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveBorder;
+            this.Memory_Button.FlatAppearance.BorderSize = 4;
+            this.Memory_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Memory_Button.Font = new System.Drawing.Font("Futura BdCn BT", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Memory_Button.ForeColor = System.Drawing.Color.Orange;
+            this.Memory_Button.Location = new System.Drawing.Point(531, 11);
+            this.Memory_Button.Name = "Memory_Button";
+            this.Memory_Button.Size = new System.Drawing.Size(123, 55);
+            this.Memory_Button.TabIndex = 34;
+            this.Memory_Button.Text = "Memory";
+            this.Memory_Button.UseVisualStyleBackColor = false;
+            this.Memory_Button.Click += new System.EventHandler(this.Memory_Button_Click);
             // 
-            // Mistory_Color
+            // History_Color
             // 
-            this.Mistory_Color.BackColor = System.Drawing.Color.Orange;
-            this.Mistory_Color.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.Mistory_Color.Font = new System.Drawing.Font("Futura BdCn BT", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Mistory_Color.Location = new System.Drawing.Point(412, 58);
-            this.Mistory_Color.Multiline = true;
-            this.Mistory_Color.Name = "Mistory_Color";
-            this.Mistory_Color.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.Mistory_Color.Size = new System.Drawing.Size(80, 3);
-            this.Mistory_Color.TabIndex = 9;
-            this.Mistory_Color.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.History_Color.BackColor = System.Drawing.Color.Orange;
+            this.History_Color.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.History_Color.Font = new System.Drawing.Font("Futura BdCn BT", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.History_Color.Location = new System.Drawing.Point(422, 55);
+            this.History_Color.Multiline = true;
+            this.History_Color.Name = "History_Color";
+            this.History_Color.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.History_Color.Size = new System.Drawing.Size(80, 3);
+            this.History_Color.TabIndex = 9;
+            this.History_Color.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // Memory_Color
             // 
             this.Memory_Color.BackColor = System.Drawing.Color.Orange;
             this.Memory_Color.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Memory_Color.Font = new System.Drawing.Font("Futura BdCn BT", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Memory_Color.Location = new System.Drawing.Point(534, 58);
+            this.Memory_Color.Location = new System.Drawing.Point(544, 55);
             this.Memory_Color.Multiline = true;
             this.Memory_Color.Name = "Memory_Color";
             this.Memory_Color.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.Memory_Color.Size = new System.Drawing.Size(95, 3);
             this.Memory_Color.TabIndex = 36;
             this.Memory_Color.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.Memory_Color.Visible = false;
+            // 
+            // Hisory_TextBox
+            // 
+            this.Hisory_TextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(62)))), ((int)(((byte)(62)))));
+            this.Hisory_TextBox.Font = new System.Drawing.Font("Futura BdCn BT", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Hisory_TextBox.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.Hisory_TextBox.Location = new System.Drawing.Point(403, 117);
+            this.Hisory_TextBox.Multiline = true;
+            this.Hisory_TextBox.Name = "Hisory_TextBox";
+            this.Hisory_TextBox.ReadOnly = true;
+            this.Hisory_TextBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.Hisory_TextBox.Size = new System.Drawing.Size(252, 399);
+            this.Hisory_TextBox.TabIndex = 37;
+            this.Hisory_TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.Hisory_TextBox.TextChanged += new System.EventHandler(this.Hisory_TextBox_TextChanged);
+            // 
+            // ResultBox_Border
+            // 
+            this.ResultBox_Border.BackColor = System.Drawing.Color.DimGray;
+            this.ResultBox_Border.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.ResultBox_Border.Font = new System.Drawing.Font("Futura BdCn BT", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.ResultBox_Border.Location = new System.Drawing.Point(13, 12);
+            this.ResultBox_Border.Multiline = true;
+            this.ResultBox_Border.Name = "ResultBox_Border";
+            this.ResultBox_Border.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.ResultBox_Border.Size = new System.Drawing.Size(373, 5);
+            this.ResultBox_Border.TabIndex = 38;
+            this.ResultBox_Border.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // ResultBox_Border1
+            // 
+            this.ResultBox_Border1.BackColor = System.Drawing.Color.DimGray;
+            this.ResultBox_Border1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.ResultBox_Border1.Font = new System.Drawing.Font("Futura BdCn BT", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.ResultBox_Border1.Location = new System.Drawing.Point(13, 98);
+            this.ResultBox_Border1.Multiline = true;
+            this.ResultBox_Border1.Name = "ResultBox_Border1";
+            this.ResultBox_Border1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.ResultBox_Border1.Size = new System.Drawing.Size(373, 5);
+            this.ResultBox_Border1.TabIndex = 39;
+            this.ResultBox_Border1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // ResultBox_Border4
+            // 
+            this.ResultBox_Border4.BackColor = System.Drawing.Color.DimGray;
+            this.ResultBox_Border4.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.ResultBox_Border4.Font = new System.Drawing.Font("Futura BdCn BT", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.ResultBox_Border4.Location = new System.Drawing.Point(13, 12);
+            this.ResultBox_Border4.Multiline = true;
+            this.ResultBox_Border4.Name = "ResultBox_Border4";
+            this.ResultBox_Border4.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.ResultBox_Border4.Size = new System.Drawing.Size(5, 89);
+            this.ResultBox_Border4.TabIndex = 40;
+            this.ResultBox_Border4.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // ResultBox_Border2
+            // 
+            this.ResultBox_Border2.BackColor = System.Drawing.Color.DimGray;
+            this.ResultBox_Border2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.ResultBox_Border2.Font = new System.Drawing.Font("Futura BdCn BT", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.ResultBox_Border2.Location = new System.Drawing.Point(382, 13);
+            this.ResultBox_Border2.Multiline = true;
+            this.ResultBox_Border2.Name = "ResultBox_Border2";
+            this.ResultBox_Border2.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.ResultBox_Border2.Size = new System.Drawing.Size(5, 89);
+            this.ResultBox_Border2.TabIndex = 41;
+            this.ResultBox_Border2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // Memory_TextBox
+            // 
+            this.Memory_TextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(62)))), ((int)(((byte)(62)))));
+            this.Memory_TextBox.Font = new System.Drawing.Font("Futura BdCn BT", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Memory_TextBox.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.Memory_TextBox.Location = new System.Drawing.Point(403, 117);
+            this.Memory_TextBox.Multiline = true;
+            this.Memory_TextBox.Name = "Memory_TextBox";
+            this.Memory_TextBox.ReadOnly = true;
+            this.Memory_TextBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.Memory_TextBox.Size = new System.Drawing.Size(252, 399);
+            this.Memory_TextBox.TabIndex = 42;
+            this.Memory_TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.Memory_TextBox.Visible = false;
+            this.Memory_TextBox.TextChanged += new System.EventHandler(this.Memory_TextBox_TextChanged);
+            // 
+            // History_Label
+            // 
+            this.History_Label.AutoSize = true;
+            this.History_Label.BackColor = System.Drawing.Color.Transparent;
+            this.History_Label.Font = new System.Drawing.Font("Futura BdCn BT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.History_Label.ForeColor = System.Drawing.Color.White;
+            this.History_Label.Location = new System.Drawing.Point(403, 80);
+            this.History_Label.Name = "History_Label";
+            this.History_Label.Size = new System.Drawing.Size(172, 25);
+            this.History_Label.TabIndex = 43;
+            this.History_Label.Text = "There\'s no history yet.";
+            // 
+            // Memory_Label
+            // 
+            this.Memory_Label.AutoSize = true;
+            this.Memory_Label.BackColor = System.Drawing.Color.Transparent;
+            this.Memory_Label.Font = new System.Drawing.Font("Futura BdCn BT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Memory_Label.ForeColor = System.Drawing.Color.White;
+            this.Memory_Label.Location = new System.Drawing.Point(403, 80);
+            this.Memory_Label.Name = "Memory_Label";
+            this.Memory_Label.Size = new System.Drawing.Size(262, 25);
+            this.Memory_Label.TabIndex = 44;
+            this.Memory_Label.Text = "There\'s nothing saved in memory.";
+            this.Memory_Label.Visible = false;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(62)))), ((int)(((byte)(62)))));
+            this.BackgroundImage = global::Calculator.Properties.Resources.h70v389765261;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(655, 543);
+            this.ClientSize = new System.Drawing.Size(671, 543);
+            this.Controls.Add(this.History_Label);
+            this.Controls.Add(this.Memory_TextBox);
+            this.Controls.Add(this.ResultBox_Border2);
+            this.Controls.Add(this.ResultBox_Border4);
+            this.Controls.Add(this.ResultBox_Border1);
+            this.Controls.Add(this.ResultBox_Border);
+            this.Controls.Add(this.txt_output2);
+            this.Controls.Add(this.txt_output);
+            this.Controls.Add(this.Hisory_TextBox);
             this.Controls.Add(this.Memory_Color);
-            this.Controls.Add(this.Mistory_Color);
-            this.Controls.Add(this.button7);
-            this.Controls.Add(this.button6);
+            this.Controls.Add(this.History_Color);
+            this.Controls.Add(this.Memory_Button);
+            this.Controls.Add(this.History_Button);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.txt_output2);
             this.Controls.Add(this.number_dec);
-            this.Controls.Add(this.txt_output);
             this.Controls.Add(this.percent);
             this.Controls.Add(this.clear_entry);
             this.Controls.Add(this.clear);
@@ -637,6 +763,7 @@ namespace Calculator
             this.Controls.Add(this.plus_minus);
             this.Controls.Add(this.number_0);
             this.Controls.Add(this.equals);
+            this.Controls.Add(this.Memory_Label);
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "Calculator (Sample)";
@@ -678,10 +805,19 @@ namespace Calculator
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.TextBox Mistory_Color;
+        private System.Windows.Forms.Button History_Button;
+        private System.Windows.Forms.Button Memory_Button;
+        private System.Windows.Forms.TextBox History_Color;
         private System.Windows.Forms.TextBox Memory_Color;
+        private System.Windows.Forms.TextBox Hisory_TextBox;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.TextBox ResultBox_Border;
+        private System.Windows.Forms.TextBox ResultBox_Border1;
+        private System.Windows.Forms.TextBox ResultBox_Border4;
+        private System.Windows.Forms.TextBox ResultBox_Border2;
+        private System.Windows.Forms.TextBox Memory_TextBox;
+        private System.Windows.Forms.Label History_Label;
+        private System.Windows.Forms.Label Memory_Label;
     }
 }
 
