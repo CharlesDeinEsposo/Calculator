@@ -94,14 +94,17 @@ namespace Calculator
 
                 case "x^2":
                     txt_output.Text = (num1 * num1).ToString();
+                    txt_output2.Text = ("sqr(" + num1 + ")");
                     break;
 
                 case "√x":
                     txt_output.Text = Math.Sqrt(num1).ToString();
+                    txt_output2.Text = ("√" + "(" + num1 + ")");
                     break;
 
                 case "%":
                     txt_output.Text = (num1 * 0.01).ToString();
+                    txt_output2.Text = ("1/(" + num1 + ")");
                     break;
 
                 case "1 / x":
