@@ -14,7 +14,7 @@ namespace Calculator
     {
         string operation = "";
         float storednumber;
-        double num1 = 0;
+        double num1 , num2;
         bool  basic_operation_clck = false;
 
         public Form1()
@@ -59,8 +59,7 @@ namespace Calculator
                         equals.PerformClick();
                         operation = b.Text;
                         txt_output2.Text = num1 + " " + operation;
-                        txt_output.Text = "";        
-                }
+                        txt_output.Text = "";            }
                 else
                 {
                     operation = b.Text;
@@ -91,7 +90,7 @@ namespace Calculator
                         break;
 
                     case "x^2":
-                        txt_output.Text = (num1 * num1).ToString();
+                        txt_output.Text = Math.Pow(num1, 2).ToString();
                         txt_output2.Text = ("sqr(" + num1 + ")");
                         break;
 
@@ -113,6 +112,7 @@ namespace Calculator
                     default:
                         break;
                 }
+                History_Textbox.AppendText(num1 + operation + "\n" + "=" + txt_output.Text + "\n\n");
 
             }
             catch
@@ -125,6 +125,7 @@ namespace Calculator
 
         private void equals_Click(object sender, EventArgs e)
         {
+            num2 = Double.Parse(txt_output.Text);
             try
             {
                 txt_output2.Text = "";
@@ -133,19 +134,23 @@ namespace Calculator
                     //bsc_oprtr
                     case "+":
                            txt_output.Text = (num1 + Double.Parse(txt_output.Text)).ToString();
+                           History_Textbox.AppendText((num1 + operation) + num2 + ("\n" + "=") + txt_output.Text + "\n\n");
 
                         break;
 
                     case "-":
                         txt_output.Text = (num1 - Double.Parse(txt_output.Text)).ToString();
+                        History_Textbox.AppendText((num1 + operation) + num2 + ("\n" + "=") + txt_output.Text + "\n\n");
                         break;
 
                     case "÷":
                         txt_output.Text = (num1 / Double.Parse(txt_output.Text)).ToString();
+                        History_Textbox.AppendText((num1 + operation) + num2 + ("\n" + "=") + txt_output.Text + "\n\n");
                         break;
 
                     case "x":
                         txt_output.Text = (num1 * Double.Parse(txt_output.Text)).ToString();
+                        History_Textbox.AppendText((num1 + operation) + num2 + ("\n" + "=") + txt_output.Text + "\n\n");
                         break;
 
                     default:
@@ -183,15 +188,6 @@ namespace Calculator
         }
 
         //------------------------------------------------------------------------------Start of Memory and History buttons ----------------------------------------------------------------------------------
-        private void History_Textbox_TextChanged(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void Memory_Textbox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void History_Button_Click(object sender, EventArgs e)
         {
@@ -256,6 +252,18 @@ namespace Calculator
         {
             storednumber -= float.Parse(txt_output.Text);
             Memory_Textbox.Text = string.Format("{0:N0}", storednumber);
+        }
+
+        private void History_Textbox_TextChanged(object sender, EventArgs e)
+        {
+            if (History_Textbox.Text.Length > 0)
+            {
+                History_Label.Visible = false;
+            }
+            else
+            {
+                History_Label.Visible = true;
+            }
         }
     }
 }

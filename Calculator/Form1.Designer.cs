@@ -698,12 +698,12 @@ namespace Calculator
             this.Memory_Textbox.Size = new System.Drawing.Size(243, 401);
             this.Memory_Textbox.TabIndex = 45;
             this.Memory_Textbox.Text = "";
-            this.Memory_Textbox.TextChanged += new System.EventHandler(this.Memory_Textbox_TextChanged);
             // 
             // History_Textbox
             // 
             this.History_Textbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.History_Textbox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.History_Textbox.Font = new System.Drawing.Font("Futura BdCn BT", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.History_Textbox.Location = new System.Drawing.Point(410, 121);
             this.History_Textbox.Name = "History_Textbox";
             this.History_Textbox.Size = new System.Drawing.Size(243, 401);
