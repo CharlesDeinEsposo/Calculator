@@ -498,6 +498,7 @@ namespace Calculator
             this.memory_recall.TabIndex = 28;
             this.memory_recall.Text = "MR";
             this.memory_recall.UseVisualStyleBackColor = false;
+            this.memory_recall.Click += new System.EventHandler(this.memory_recall_Click);
             // 
             // memory_subtract
             // 

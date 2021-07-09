@@ -13,6 +13,7 @@ namespace Calculator
     public partial class Form1 : Form
     {
         string operation = "";
+        float storednumber;
         double num1 = 0;
         bool  basic_operation_clck = false;
 
@@ -224,6 +225,7 @@ namespace Calculator
 
         private void memory_save_Click(object sender, EventArgs e)
         {
+            storednumber = float.Parse(txt_output.Text);
             memory_add.Enabled = true;
             memory_subtract.Enabled = true;
             memory_clear.Enabled = true;
@@ -234,6 +236,11 @@ namespace Calculator
         private void memory_clear_Click(object sender, EventArgs e)
         {
             Memory_Textbox.Clear();
+        }
+
+        private void memory_recall_Click(object sender, EventArgs e)
+        {
+            txt_output.Text = string.Format("{0:N0}", storednumber);
         }
     }
 }
