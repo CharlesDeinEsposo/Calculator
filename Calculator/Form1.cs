@@ -125,9 +125,10 @@ namespace Calculator
 
         private void equals_Click(object sender, EventArgs e)
         {
-            num2 = Double.Parse(txt_output.Text);
+
             try
             {
+                num2 = Double.Parse(txt_output.Text);
                 txt_output2.Text = "";
                 switch (operation)
                 {
