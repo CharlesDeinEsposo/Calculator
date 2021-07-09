@@ -40,6 +40,118 @@ namespace Calculator
             else
                 txt_output.Text = txt_output.Text + nmbrs.Text;
         }
+
+        private void bsc_oprtr_clck(object sender, EventArgs e)
+        {
+            try
+            {
+                Button b = (Button)sender;
+                operation = b.Text;
+                num1 = Double.Parse(txt_output.Text);
+                basic_operation_clck = true;
+                txt_output2.Text = txt_output.Text + " " + b.Text;
+
+                //pending
+                if (num1 != 0)
+                {
+
+                }
+                //
+
+
+                txt_output.Text = "";
+            }
+            catch
+            {
+                txt_output.Text = "Syntax Error";
+            }
+        }
+        private void adv_oprtr_clck(object sender, EventArgs e)
+        {
+            try
+            {
+                Button b = (Button)sender;
+                operation = b.Text;
+                num1 = Double.Parse(txt_output.Text);
+                basic_operation_clck = true;
+
+                switch (operation)
+                {
+                    case "±":
+                        txt_output.Text = (num1 * -1).ToString();
+                        break;
+
+                    case "x^2":
+                        txt_output.Text = (num1 * num1).ToString();
+                        txt_output2.Text = ("sqr(" + num1 + ")");
+                        break;
+
+                    case "√x":
+                        txt_output.Text = Math.Sqrt(num1).ToString();
+                        txt_output2.Text = ("√" + "(" + num1 + ")");
+                        break;
+
+                    case "1 / x":
+                        txt_output.Text = (1 / num1).ToString();
+                        txt_output2.Text = ("1/(" + num1 + ")");
+                        break;
+
+                    default:
+                        break;
+                }
+            }
+            catch
+            {
+                txt_output.Text = "Syntax Error";
+            }
+   
+        }
+
+        private void equals_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                txt_output2.Text = "";
+                switch (operation)
+                {
+                    //bsc_oprtr
+                    case "+":
+                        txt_output.Text = (num1 + Double.Parse(txt_output.Text)).ToString();
+                        break;
+
+                    case "-":
+                        txt_output.Text = (num1 - Double.Parse(txt_output.Text)).ToString();
+                        break;
+
+                    case "÷":
+                        txt_output.Text = (num1 / Double.Parse(txt_output.Text)).ToString();
+                        break;
+
+                    case "x":
+                        if (operation == "x")
+                        {
+                            if (operation == "%")
+                            {
+                                txt_output.Text = (num1 / 100).ToString();
+                                txt_output2.Text = (num1 + "/100");
+                            }
+                            else
+                            {
+                                txt_output.Text = (num1 * Double.Parse(txt_output.Text)).ToString();
+                            }
+                        }
+                        break;
+
+                    default:
+                        break;
+                }
+            }
+            catch
+            {
+                txt_output.Text = "Syntax Error";
+            }
+            
+        }
         private void clear_Click(object sender, EventArgs e)
         {
             txt_output.Text = "0";
@@ -60,94 +172,6 @@ namespace Calculator
                 txt_output.Text = "0";
         }
 
-        private void bsc_oprtr_clck(object sender, EventArgs e)
-        {
-            Button b = (Button)sender;
-            operation = b.Text;
-            num1 = Double.Parse(txt_output.Text);
-            basic_operation_clck = true;
-            txt_output2.Text = txt_output.Text + " " + b.Text;
-
-            //pending
-            if (num1 != 0)
-            {
-
-            }
-            //
-
-
-            txt_output.Text = "";
-
-        }
-        private void adv_oprtr_clck(object sender, EventArgs e)
-        {
-            Button b = (Button)sender;
-            operation = b.Text;
-            num1 = Double.Parse(txt_output.Text);
-            basic_operation_clck = true;
-
-            switch (operation)
-            {
-                case "±":
-                    txt_output.Text = (num1 * -1).ToString();
-                    break;
-
-                case "x^2":
-                    txt_output.Text = (num1 * num1).ToString();
-                    txt_output2.Text = ("sqr(" + num1 + ")");
-                    break;
-
-                case "√x":
-                    txt_output.Text = Math.Sqrt(num1).ToString();
-                    txt_output2.Text = ("√" + "(" + num1 + ")");
-                    break;
-
-                case "%":
-                    txt_output.Text = (num1 * 0.01).ToString();
-                    txt_output2.Text = ("1/(" + num1 + ")");
-                    break;
-
-                case "1 / x":
-                    txt_output.Text = (1 / num1).ToString();
-                    txt_output2.Text = ("1/(" + num1 + ")");
-                    break;
-
-                default:
-                    break;
-            }
-        }
-
-        private void equals_Click(object sender, EventArgs e)
-        {
-
-            txt_output2.Text = "";
-            
-
-            switch (operation)
-            {
-            //bsc_oprtr
-                case "+":
-                    txt_output.Text = (num1 + Double.Parse(txt_output.Text)).ToString();
-                    break;
-
-                case "-":
-                    txt_output.Text = (num1 - Double.Parse(txt_output.Text)).ToString();
-                    break;
-
-                case "÷":
-                    txt_output.Text = (num1 / Double.Parse(txt_output.Text)).ToString();
-                    break;
-
-                case "x":
-                    txt_output.Text = (num1 * Double.Parse(txt_output.Text)).ToString();
-                    break;
-
-                default:
-                    break;
-
-                   
-            }
-        }
 
         private void Hisory_TextBox_TextChanged(object sender, EventArgs e)
         {
