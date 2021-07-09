@@ -12,15 +12,15 @@ namespace Calculator
 {
     public partial class Form1 : Form
     {
-        String operation = "";
-        Double num1 = 0;
+        string operation = "";
+        double num1 = 0;
         bool  basic_operation_clck = false;
 
         public Form1()
         {
             InitializeComponent();
         }
-        //number buttons
+        //------------------------------------------------- Start of Number Buttons ----------------------------------------
         private void numbers_Click(object sender, EventArgs e)
         {
             Button nmbrs = (Button)sender;
@@ -41,29 +41,31 @@ namespace Calculator
                 txt_output.Text = txt_output.Text + nmbrs.Text;
         }
 
+        //------------------------------------------------- Start of Operation Buttons ----------------------------------------
         private void bsc_oprtr_clck(object sender, EventArgs e)
         {
             try
             {
                 Button b = (Button)sender;
-                operation = b.Text;
-                num1 = Double.Parse(txt_output.Text);
-                basic_operation_clck = true;
-                txt_output2.Text = txt_output.Text + " " + b.Text;
-
-                //pending
                 if (num1 != 0)
-                {
-
+                {                
+                        equals.PerformClick();
+                        operation = b.Text;
+                        txt_output2.Text = num1 + " " + operation;
+                        txt_output.Text = "";        
                 }
-                //
-
-
-                txt_output.Text = "";
+                else
+                {
+                    operation = b.Text;
+                    num1 = Double.Parse(txt_output.Text);
+                    txt_output2.Text = txt_output.Text + " " + b.Text;
+                    txt_output.Text = "";
+                }
             }
             catch
             {
-                txt_output.Text = "Syntax Error";
+                txt_output.Text = "Math Error!";
+                delete.Enabled = false;
             }
         }
         private void adv_oprtr_clck(object sender, EventArgs e)
@@ -96,13 +98,20 @@ namespace Calculator
                         txt_output2.Text = ("1/(" + num1 + ")");
                         break;
 
+                    case "%":
+                        txt_output.Text = (num1 / 100).ToString(); 
+                        break;
+
+
                     default:
                         break;
                 }
+
             }
             catch
             {
-                txt_output.Text = "Syntax Error";
+                txt_output.Text = "Math Error!";
+                delete.Enabled = false;
             }
    
         }
@@ -116,7 +125,8 @@ namespace Calculator
                 {
                     //bsc_oprtr
                     case "+":
-                        txt_output.Text = (num1 + Double.Parse(txt_output.Text)).ToString();
+                           txt_output.Text = (num1 + Double.Parse(txt_output.Text)).ToString();
+
                         break;
 
                     case "-":
@@ -128,30 +138,23 @@ namespace Calculator
                         break;
 
                     case "x":
-                        if (operation == "x")
-                        {
-                            if (operation == "%")
-                            {
-                                txt_output.Text = (num1 / 100).ToString();
-                                txt_output2.Text = (num1 + "/100");
-                            }
-                            else
-                            {
-                                txt_output.Text = (num1 * Double.Parse(txt_output.Text)).ToString();
-                            }
-                        }
+                        txt_output.Text = (num1 * Double.Parse(txt_output.Text)).ToString();
                         break;
 
                     default:
                         break;
                 }
+                num1 = Double.Parse(txt_output.Text);
+                operation = " ";
             }
             catch
             {
-                txt_output.Text = "Syntax Error";
+                txt_output.Text = "Math Error!";
             }
             
         }
+
+        // delete and clear buttons
         private void clear_Click(object sender, EventArgs e)
         {
             txt_output.Text = "0";
@@ -172,7 +175,7 @@ namespace Calculator
                 txt_output.Text = "0";
         }
 
-
+        // memory and history buttons
         private void Hisory_TextBox_TextChanged(object sender, EventArgs e)
         {
 
