@@ -515,6 +515,7 @@ namespace Calculator
             this.memory_subtract.TabIndex = 30;
             this.memory_subtract.Text = "M-";
             this.memory_subtract.UseVisualStyleBackColor = false;
+            this.memory_subtract.Click += new System.EventHandler(this.memory_subtract_Click);
             // 
             // memory_add
             // 
@@ -531,6 +532,7 @@ namespace Calculator
             this.memory_add.TabIndex = 29;
             this.memory_add.Text = "M+";
             this.memory_add.UseVisualStyleBackColor = false;
+            this.memory_add.Click += new System.EventHandler(this.memory_add_Click);
             // 
             // memory_save
             // 
@@ -689,10 +691,10 @@ namespace Calculator
             // 
             this.Memory_Textbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.Memory_Textbox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Memory_Textbox.Font = new System.Drawing.Font("Futura BdCn BT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Memory_Textbox.Font = new System.Drawing.Font("Futura BdCn BT", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Memory_Textbox.Location = new System.Drawing.Point(410, 121);
             this.Memory_Textbox.Name = "Memory_Textbox";
-            this.Memory_Textbox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.Memory_Textbox.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.Memory_Textbox.Size = new System.Drawing.Size(243, 401);
             this.Memory_Textbox.TabIndex = 45;
             this.Memory_Textbox.Text = "";

@@ -20,6 +20,8 @@ namespace Calculator
         public Form1()
         {
             InitializeComponent();
+            Memory_Textbox.SelectionAlignment = HorizontalAlignment.Right;
+            History_Textbox.SelectionAlignment = HorizontalAlignment.Right;
             memory_clear.Enabled = false;
             memory_add.Enabled = false;
             memory_subtract.Enabled = false;
@@ -183,7 +185,7 @@ namespace Calculator
         //------------------------------------------------------------------------------Start of Memory and History buttons ----------------------------------------------------------------------------------
         private void History_Textbox_TextChanged(object sender, EventArgs e)
         {
-
+            
         }
 
         private void Memory_Textbox_TextChanged(object sender, EventArgs e)
@@ -201,10 +203,6 @@ namespace Calculator
             History_Label.Visible = true;
             History_Textbox.Visible = true;
 
-            if (memory_add.Enabled = true)
-            {
-                History_Label.Visible = false;
-            }
         }
 
         private void Memory_Button_Click(object sender, EventArgs e)
@@ -217,10 +215,6 @@ namespace Calculator
             History_Label.Visible = false;
             History_Textbox.Visible = false;
 
-            if (memory_add.Enabled = true)
-            {
-                Memory_Label.Visible = false;
-            }
         }
 
         private void memory_save_Click(object sender, EventArgs e)
@@ -231,7 +225,16 @@ namespace Calculator
             memory_clear.Enabled = true;
             memory_recall.Enabled = true;
 
-            Memory_Textbox.AppendText(txt_output.Text + "\n");
+            Memory_Textbox.AppendText(txt_output.Text + "\n\n");
+
+            if (Memory_Textbox.Text.Length > 0)
+            {
+                Memory_Label.Visible = false;
+            }
+            else
+            {
+                Memory_Label.Visible = true;
+            }
         }
         private void memory_clear_Click(object sender, EventArgs e)
         {
@@ -241,6 +244,18 @@ namespace Calculator
         private void memory_recall_Click(object sender, EventArgs e)
         {
             txt_output.Text = string.Format("{0:N0}", storednumber);
+        }
+
+        private void memory_add_Click(object sender, EventArgs e)
+        {
+            storednumber += float.Parse(txt_output.Text);
+            Memory_Textbox.Text = string.Format("{0:N0}", storednumber);
+        }
+
+        private void memory_subtract_Click(object sender, EventArgs e)
+        {
+            storednumber -= float.Parse(txt_output.Text);
+            Memory_Textbox.Text = string.Format("{0:N0}", storednumber);
         }
     }
 }
