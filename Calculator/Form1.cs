@@ -19,8 +19,12 @@ namespace Calculator
         public Form1()
         {
             InitializeComponent();
+            memory_clear.Enabled = false;
+            memory_add.Enabled = false;
+            memory_subtract.Enabled = false;
+            memory_recall.Enabled = false;
         }
-        //------------------------------------------------- Start of Number Buttons ----------------------------------------
+        //------------------------------------------------------------------------------------- Start of Number Buttons ----------------------------------------------------------------------------------------
         private void numbers_Click(object sender, EventArgs e)
         {
             Button nmbrs = (Button)sender;
@@ -41,7 +45,7 @@ namespace Calculator
                 txt_output.Text = txt_output.Text + nmbrs.Text;
         }
 
-        //------------------------------------------------- Start of Operation Buttons ----------------------------------------
+        //------------------------------------------------------------------------------------ Start of Operation Buttons -----------------------------------------------------------------------------------------
         private void bsc_oprtr_clck(object sender, EventArgs e)
         {
             try
@@ -154,7 +158,7 @@ namespace Calculator
             
         }
 
-        // delete and clear buttons
+        //------------------------------------------------------------------------------ Start of Delete and Clear buttons -------------------------------------------------------------------------------
         private void clear_Click(object sender, EventArgs e)
         {
             txt_output.Text = "0";
@@ -175,7 +179,7 @@ namespace Calculator
                 txt_output.Text = "0";
         }
 
-        // memory and history buttons
+        //------------------------------------------------------------------------------Start of Memory and History buttons ----------------------------------------------------------------------------------
         private void Hisory_TextBox_TextChanged(object sender, EventArgs e)
         {
 
@@ -206,6 +210,17 @@ namespace Calculator
             History_Color.Visible = false;
             History_Label.Visible = false;
             Hisory_TextBox.Visible = false;
+        }
+
+        private void memory_save_Click(object sender, EventArgs e)
+        {
+            memory_add.Enabled = true;
+            memory_subtract.Enabled = true;
+            memory_clear.Enabled = true;
+            memory_recall.Enabled = true;
+
+            Memory_TextBox.Text = txt_output.Text;
+
         }
     }
 }

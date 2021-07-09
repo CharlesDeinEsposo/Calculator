@@ -55,11 +55,11 @@ namespace Calculator
             this.txt_output = new System.Windows.Forms.TextBox();
             this.number_dec = new System.Windows.Forms.Button();
             this.txt_output2 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.memory_clear = new System.Windows.Forms.Button();
+            this.memory_recall = new System.Windows.Forms.Button();
+            this.memory_subtract = new System.Windows.Forms.Button();
+            this.memory_add = new System.Windows.Forms.Button();
+            this.memory_save = new System.Windows.Forms.Button();
             this.History_Button = new System.Windows.Forms.Button();
             this.Memory_Button = new System.Windows.Forms.Button();
             this.History_Color = new System.Windows.Forms.TextBox();
@@ -466,85 +466,86 @@ namespace Calculator
             this.txt_output2.TabIndex = 26;
             this.txt_output2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // button1
+            // memory_clear
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(62)))), ((int)(((byte)(62)))));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveBorder;
-            this.button1.FlatAppearance.BorderSize = 4;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Futura BdCn BT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(12, 107);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(70, 46);
-            this.button1.TabIndex = 27;
-            this.button1.Text = "MC";
-            this.button1.UseVisualStyleBackColor = false;
+            this.memory_clear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(62)))), ((int)(((byte)(62)))));
+            this.memory_clear.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.memory_clear.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveBorder;
+            this.memory_clear.FlatAppearance.BorderSize = 4;
+            this.memory_clear.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.memory_clear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.memory_clear.Font = new System.Drawing.Font("Futura BdCn BT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.memory_clear.Location = new System.Drawing.Point(12, 107);
+            this.memory_clear.Name = "memory_clear";
+            this.memory_clear.Size = new System.Drawing.Size(70, 46);
+            this.memory_clear.TabIndex = 27;
+            this.memory_clear.Text = "MC";
+            this.memory_clear.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // memory_recall
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(62)))), ((int)(((byte)(62)))));
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button2.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveBorder;
-            this.button2.FlatAppearance.BorderSize = 4;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Futura BdCn BT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button2.Location = new System.Drawing.Point(88, 107);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(70, 46);
-            this.button2.TabIndex = 28;
-            this.button2.Text = "MR";
-            this.button2.UseVisualStyleBackColor = false;
+            this.memory_recall.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(62)))), ((int)(((byte)(62)))));
+            this.memory_recall.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.memory_recall.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveBorder;
+            this.memory_recall.FlatAppearance.BorderSize = 4;
+            this.memory_recall.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.memory_recall.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.memory_recall.Font = new System.Drawing.Font("Futura BdCn BT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.memory_recall.Location = new System.Drawing.Point(88, 107);
+            this.memory_recall.Name = "memory_recall";
+            this.memory_recall.Size = new System.Drawing.Size(70, 46);
+            this.memory_recall.TabIndex = 28;
+            this.memory_recall.Text = "MR";
+            this.memory_recall.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // memory_subtract
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(62)))), ((int)(((byte)(62)))));
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button3.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveBorder;
-            this.button3.FlatAppearance.BorderSize = 4;
-            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Futura BdCn BT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button3.Location = new System.Drawing.Point(240, 107);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(70, 46);
-            this.button3.TabIndex = 30;
-            this.button3.Text = "M-";
-            this.button3.UseVisualStyleBackColor = false;
+            this.memory_subtract.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(62)))), ((int)(((byte)(62)))));
+            this.memory_subtract.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.memory_subtract.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveBorder;
+            this.memory_subtract.FlatAppearance.BorderSize = 4;
+            this.memory_subtract.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.memory_subtract.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.memory_subtract.Font = new System.Drawing.Font("Futura BdCn BT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.memory_subtract.Location = new System.Drawing.Point(240, 107);
+            this.memory_subtract.Name = "memory_subtract";
+            this.memory_subtract.Size = new System.Drawing.Size(70, 46);
+            this.memory_subtract.TabIndex = 30;
+            this.memory_subtract.Text = "M-";
+            this.memory_subtract.UseVisualStyleBackColor = false;
             // 
-            // button4
+            // memory_add
             // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(62)))), ((int)(((byte)(62)))));
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button4.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveBorder;
-            this.button4.FlatAppearance.BorderSize = 4;
-            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Futura BdCn BT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button4.Location = new System.Drawing.Point(164, 107);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(70, 46);
-            this.button4.TabIndex = 29;
-            this.button4.Text = "M+";
-            this.button4.UseVisualStyleBackColor = false;
+            this.memory_add.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(62)))), ((int)(((byte)(62)))));
+            this.memory_add.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.memory_add.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveBorder;
+            this.memory_add.FlatAppearance.BorderSize = 4;
+            this.memory_add.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.memory_add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.memory_add.Font = new System.Drawing.Font("Futura BdCn BT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.memory_add.Location = new System.Drawing.Point(164, 107);
+            this.memory_add.Name = "memory_add";
+            this.memory_add.Size = new System.Drawing.Size(70, 46);
+            this.memory_add.TabIndex = 29;
+            this.memory_add.Text = "M+";
+            this.memory_add.UseVisualStyleBackColor = false;
             // 
-            // button5
+            // memory_save
             // 
-            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(62)))), ((int)(((byte)(62)))));
-            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button5.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveBorder;
-            this.button5.FlatAppearance.BorderSize = 4;
-            this.button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Futura BdCn BT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button5.Location = new System.Drawing.Point(316, 107);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(70, 46);
-            this.button5.TabIndex = 32;
-            this.button5.Text = "MS";
-            this.button5.UseVisualStyleBackColor = false;
+            this.memory_save.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(62)))), ((int)(((byte)(62)))));
+            this.memory_save.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.memory_save.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveBorder;
+            this.memory_save.FlatAppearance.BorderSize = 4;
+            this.memory_save.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.memory_save.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.memory_save.Font = new System.Drawing.Font("Futura BdCn BT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.memory_save.Location = new System.Drawing.Point(316, 107);
+            this.memory_save.Name = "memory_save";
+            this.memory_save.Size = new System.Drawing.Size(70, 46);
+            this.memory_save.TabIndex = 32;
+            this.memory_save.Text = "MS";
+            this.memory_save.UseVisualStyleBackColor = false;
+            this.memory_save.Click += new System.EventHandler(this.memory_save_Click);
             // 
             // History_Button
             // 
@@ -734,11 +735,11 @@ namespace Calculator
             this.Controls.Add(this.History_Color);
             this.Controls.Add(this.Memory_Button);
             this.Controls.Add(this.History_Button);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.memory_save);
+            this.Controls.Add(this.memory_subtract);
+            this.Controls.Add(this.memory_add);
+            this.Controls.Add(this.memory_recall);
+            this.Controls.Add(this.memory_clear);
             this.Controls.Add(this.number_dec);
             this.Controls.Add(this.percent);
             this.Controls.Add(this.clear_entry);
@@ -801,11 +802,11 @@ namespace Calculator
         private System.Windows.Forms.TextBox txt_output;
         private System.Windows.Forms.Button number_dec;
         private System.Windows.Forms.TextBox txt_output2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button memory_clear;
+        private System.Windows.Forms.Button memory_recall;
+        private System.Windows.Forms.Button memory_subtract;
+        private System.Windows.Forms.Button memory_add;
+        private System.Windows.Forms.Button memory_save;
         private System.Windows.Forms.Button History_Button;
         private System.Windows.Forms.Button Memory_Button;
         private System.Windows.Forms.TextBox History_Color;
