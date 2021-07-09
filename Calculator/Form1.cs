@@ -199,6 +199,15 @@ namespace Calculator
             History_Label.Visible = true;
             History_Textbox.Visible = true;
 
+            if (History_Textbox.Text.Length > 0)
+            {
+                History_Label.Visible = false;
+            }
+            else
+            {
+                History_Label.Visible = true;
+
+            }
         }
 
         private void Memory_Button_Click(object sender, EventArgs e)
@@ -211,7 +220,16 @@ namespace Calculator
             History_Label.Visible = false;
             History_Textbox.Visible = false;
 
-        }
+                if (Memory_Textbox.Text.Length > 0)
+                {
+                    Memory_Label.Visible = false;
+                }
+                else
+                {
+                    Memory_Label.Visible = true;
+                }
+
+            }
 
         private void memory_save_Click(object sender, EventArgs e)
         {
