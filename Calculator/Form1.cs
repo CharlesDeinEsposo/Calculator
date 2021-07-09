@@ -180,12 +180,12 @@ namespace Calculator
         }
 
         //------------------------------------------------------------------------------Start of Memory and History buttons ----------------------------------------------------------------------------------
-        private void Hisory_TextBox_TextChanged(object sender, EventArgs e)
+        private void History_Textbox_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void Memory_TextBox_TextChanged(object sender, EventArgs e)
+        private void Memory_Textbox_TextChanged(object sender, EventArgs e)
         {
 
         }
@@ -194,22 +194,32 @@ namespace Calculator
         {
             Memory_Color.Visible = false;
             Memory_Label.Visible = false;
-            Memory_TextBox.Visible = false;
+            Memory_Textbox.Visible = false;
 
             History_Color.Visible = true;
             History_Label.Visible = true;
-            Hisory_TextBox.Visible = true;
+            History_Textbox.Visible = true;
+
+            if (memory_add.Enabled = true)
+            {
+                History_Label.Visible = false;
+            }
         }
 
         private void Memory_Button_Click(object sender, EventArgs e)
         {
             Memory_Color.Visible = true;
             Memory_Label.Visible = true;
-            Memory_TextBox.Visible = true;
+            Memory_Textbox.Visible = true;
 
             History_Color.Visible = false;
             History_Label.Visible = false;
-            Hisory_TextBox.Visible = false;
+            History_Textbox.Visible = false;
+
+            if (memory_add.Enabled = true)
+            {
+                Memory_Label.Visible = false;
+            }
         }
 
         private void memory_save_Click(object sender, EventArgs e)
@@ -219,8 +229,11 @@ namespace Calculator
             memory_clear.Enabled = true;
             memory_recall.Enabled = true;
 
-            Memory_TextBox.Text = txt_output.Text;
-
+            Memory_Textbox.AppendText(txt_output.Text + "\n");
+        }
+        private void memory_clear_Click(object sender, EventArgs e)
+        {
+            Memory_Textbox.Clear();
         }
     }
 }

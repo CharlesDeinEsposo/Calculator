@@ -64,15 +64,15 @@ namespace Calculator
             this.Memory_Button = new System.Windows.Forms.Button();
             this.History_Color = new System.Windows.Forms.TextBox();
             this.Memory_Color = new System.Windows.Forms.TextBox();
-            this.Hisory_TextBox = new System.Windows.Forms.TextBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.ResultBox_Border = new System.Windows.Forms.TextBox();
             this.ResultBox_Border1 = new System.Windows.Forms.TextBox();
             this.ResultBox_Border4 = new System.Windows.Forms.TextBox();
             this.ResultBox_Border2 = new System.Windows.Forms.TextBox();
-            this.Memory_TextBox = new System.Windows.Forms.TextBox();
             this.History_Label = new System.Windows.Forms.Label();
             this.Memory_Label = new System.Windows.Forms.Label();
+            this.Memory_Textbox = new System.Windows.Forms.RichTextBox();
+            this.History_Textbox = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
             // 
             // equals
@@ -481,6 +481,7 @@ namespace Calculator
             this.memory_clear.TabIndex = 27;
             this.memory_clear.Text = "MC";
             this.memory_clear.UseVisualStyleBackColor = false;
+            this.memory_clear.Click += new System.EventHandler(this.memory_clear_Click);
             // 
             // memory_recall
             // 
@@ -606,21 +607,6 @@ namespace Calculator
             this.Memory_Color.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.Memory_Color.Visible = false;
             // 
-            // Hisory_TextBox
-            // 
-            this.Hisory_TextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(62)))), ((int)(((byte)(62)))));
-            this.Hisory_TextBox.Font = new System.Drawing.Font("Futura BdCn BT", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Hisory_TextBox.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.Hisory_TextBox.Location = new System.Drawing.Point(403, 117);
-            this.Hisory_TextBox.Multiline = true;
-            this.Hisory_TextBox.Name = "Hisory_TextBox";
-            this.Hisory_TextBox.ReadOnly = true;
-            this.Hisory_TextBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.Hisory_TextBox.Size = new System.Drawing.Size(252, 399);
-            this.Hisory_TextBox.TabIndex = 37;
-            this.Hisory_TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.Hisory_TextBox.TextChanged += new System.EventHandler(this.Hisory_TextBox_TextChanged);
-            // 
             // ResultBox_Border
             // 
             this.ResultBox_Border.BackColor = System.Drawing.Color.DimGray;
@@ -673,22 +659,6 @@ namespace Calculator
             this.ResultBox_Border2.TabIndex = 41;
             this.ResultBox_Border2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // Memory_TextBox
-            // 
-            this.Memory_TextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(62)))), ((int)(((byte)(62)))));
-            this.Memory_TextBox.Font = new System.Drawing.Font("Futura BdCn BT", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Memory_TextBox.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.Memory_TextBox.Location = new System.Drawing.Point(403, 117);
-            this.Memory_TextBox.Multiline = true;
-            this.Memory_TextBox.Name = "Memory_TextBox";
-            this.Memory_TextBox.ReadOnly = true;
-            this.Memory_TextBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.Memory_TextBox.Size = new System.Drawing.Size(252, 399);
-            this.Memory_TextBox.TabIndex = 42;
-            this.Memory_TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.Memory_TextBox.Visible = false;
-            this.Memory_TextBox.TextChanged += new System.EventHandler(this.Memory_TextBox_TextChanged);
-            // 
             // History_Label
             // 
             this.History_Label.AutoSize = true;
@@ -714,6 +684,30 @@ namespace Calculator
             this.Memory_Label.Text = "There\'s nothing saved in memory.";
             this.Memory_Label.Visible = false;
             // 
+            // Memory_Textbox
+            // 
+            this.Memory_Textbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Memory_Textbox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Memory_Textbox.Font = new System.Drawing.Font("Futura BdCn BT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Memory_Textbox.Location = new System.Drawing.Point(410, 121);
+            this.Memory_Textbox.Name = "Memory_Textbox";
+            this.Memory_Textbox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.Memory_Textbox.Size = new System.Drawing.Size(243, 401);
+            this.Memory_Textbox.TabIndex = 45;
+            this.Memory_Textbox.Text = "";
+            this.Memory_Textbox.TextChanged += new System.EventHandler(this.Memory_Textbox_TextChanged);
+            // 
+            // History_Textbox
+            // 
+            this.History_Textbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.History_Textbox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.History_Textbox.Location = new System.Drawing.Point(410, 121);
+            this.History_Textbox.Name = "History_Textbox";
+            this.History_Textbox.Size = new System.Drawing.Size(243, 401);
+            this.History_Textbox.TabIndex = 46;
+            this.History_Textbox.Text = "";
+            this.History_Textbox.TextChanged += new System.EventHandler(this.History_Textbox_TextChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -723,14 +717,12 @@ namespace Calculator
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(671, 543);
             this.Controls.Add(this.History_Label);
-            this.Controls.Add(this.Memory_TextBox);
             this.Controls.Add(this.ResultBox_Border2);
             this.Controls.Add(this.ResultBox_Border4);
             this.Controls.Add(this.ResultBox_Border1);
             this.Controls.Add(this.ResultBox_Border);
             this.Controls.Add(this.txt_output2);
             this.Controls.Add(this.txt_output);
-            this.Controls.Add(this.Hisory_TextBox);
             this.Controls.Add(this.Memory_Color);
             this.Controls.Add(this.History_Color);
             this.Controls.Add(this.Memory_Button);
@@ -765,6 +757,8 @@ namespace Calculator
             this.Controls.Add(this.number_0);
             this.Controls.Add(this.equals);
             this.Controls.Add(this.Memory_Label);
+            this.Controls.Add(this.History_Textbox);
+            this.Controls.Add(this.Memory_Textbox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "Form1";
@@ -811,15 +805,15 @@ namespace Calculator
         private System.Windows.Forms.Button Memory_Button;
         private System.Windows.Forms.TextBox History_Color;
         private System.Windows.Forms.TextBox Memory_Color;
-        private System.Windows.Forms.TextBox Hisory_TextBox;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.TextBox ResultBox_Border;
         private System.Windows.Forms.TextBox ResultBox_Border1;
         private System.Windows.Forms.TextBox ResultBox_Border4;
         private System.Windows.Forms.TextBox ResultBox_Border2;
-        private System.Windows.Forms.TextBox Memory_TextBox;
         private System.Windows.Forms.Label History_Label;
         private System.Windows.Forms.Label Memory_Label;
+        private System.Windows.Forms.RichTextBox Memory_Textbox;
+        private System.Windows.Forms.RichTextBox History_Textbox;
     }
 }
 
